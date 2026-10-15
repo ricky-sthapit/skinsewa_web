@@ -1,0 +1,6698 @@
+[
+  {
+    "id": 101,
+    "name": "Koshi Pradesh",
+    "name_ne": "कोशी प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 102,
+    "name": "Madhesh Pradesh",
+    "name_ne": "मधेश प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 103,
+    "name": "Bagmati Pradesh",
+    "name_ne": "बागमती प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 104,
+    "name": "Gandaki Pradesh",
+    "name_ne": "गण्डकी प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 105,
+    "name": "Lumbini Pradesh",
+    "name_ne": "लुम्बिनी प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 106,
+    "name": "Karnali Pradesh",
+    "name_ne": "कर्णाली प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 107,
+    "name": "Sudurpashchim Pradesh",
+    "name_ne": "सुदूरपश्चिम प्रदेश",
+    "type": "Province",
+    "parent": 0,
+    "level": 0
+  },
+  {
+    "id": 108,
+    "name": "Bhojpur",
+    "name_ne": "भोजपुर",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 109,
+    "name": "Dhankuta",
+    "name_ne": "धनकुटा",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 110,
+    "name": "Ilam",
+    "name_ne": "इलाम",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 111,
+    "name": "Jhapa",
+    "name_ne": "झापा",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 112,
+    "name": "Khotang",
+    "name_ne": "खोटाङ",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 113,
+    "name": "Morang",
+    "name_ne": "मोरङ",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 114,
+    "name": "Okhaldhunga",
+    "name_ne": "ओखलढुङ्गा",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 115,
+    "name": "Pachthar",
+    "name_ne": "पाँचथर",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 116,
+    "name": "Sankhuwasabha",
+    "name_ne": "संखुवासभा",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 117,
+    "name": "Solukhumbu",
+    "name_ne": "सोलुखुम्बु",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 118,
+    "name": "Sunsari",
+    "name_ne": "सुनसरी",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 119,
+    "name": "Taplejung",
+    "name_ne": "ताप्लेजुङ",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 120,
+    "name": "Terhathum",
+    "name_ne": "तेह्रथुम",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 121,
+    "name": "Udayapur",
+    "name_ne": "उदयपुर",
+    "type": "District",
+    "parent": 101,
+    "level": 1
+  },
+  {
+    "id": 122,
+    "name": "Bara",
+    "name_ne": "बारा",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 123,
+    "name": "Dhanusha",
+    "name_ne": "धनुषा",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 124,
+    "name": "Mahottari",
+    "name_ne": "महोत्तरी",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 125,
+    "name": "Parsa",
+    "name_ne": "पर्सा",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 126,
+    "name": "Rautahat",
+    "name_ne": "रौतहट",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 127,
+    "name": "Saptari",
+    "name_ne": "सप्तरी",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 128,
+    "name": "Sarlahi",
+    "name_ne": "सर्लाही",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 129,
+    "name": "Siraha",
+    "name_ne": "सिराहा",
+    "type": "District",
+    "parent": 102,
+    "level": 1
+  },
+  {
+    "id": 130,
+    "name": "Bhaktapur",
+    "name_ne": "भक्तपुर",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 131,
+    "name": "Chitwan",
+    "name_ne": "चितवन",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 132,
+    "name": "Dhading",
+    "name_ne": "धादिङ",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 133,
+    "name": "Dolakha",
+    "name_ne": "दोलखा",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 134,
+    "name": "Kathmandu",
+    "name_ne": "काठमाडौं",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 135,
+    "name": "Kavrepalanchok",
+    "name_ne": "काभ्रेपलाञ्चोक",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 136,
+    "name": "Lalitpur",
+    "name_ne": "ललितपुर",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 137,
+    "name": "Makwanpur",
+    "name_ne": "मकवानपुर",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 138,
+    "name": "Nuwakot",
+    "name_ne": "नुवाकोट",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 139,
+    "name": "Ramechhap",
+    "name_ne": "रामेछाप",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 140,
+    "name": "Rasuwa",
+    "name_ne": "रसुवा",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 141,
+    "name": "Sindhuli",
+    "name_ne": "सिन्धुली",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 142,
+    "name": "Sindhupalchok",
+    "name_ne": "सिन्धुपाल्चोक",
+    "type": "District",
+    "parent": 103,
+    "level": 1
+  },
+  {
+    "id": 143,
+    "name": "Baglung",
+    "name_ne": "बागलुङ",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 144,
+    "name": "Gorkha",
+    "name_ne": "गोरखा",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 145,
+    "name": "Kaski",
+    "name_ne": "कास्की",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 146,
+    "name": "Lamjung",
+    "name_ne": "लमजुङ",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 147,
+    "name": "Manang",
+    "name_ne": "मनाङ",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 148,
+    "name": "Mustang",
+    "name_ne": "मुस्ताङ",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 149,
+    "name": "Myagdi",
+    "name_ne": "म्याग्दी",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 150,
+    "name": "Nawalparari East",
+    "name_ne": "नवलपरासी पूर्व",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 151,
+    "name": "Parbat",
+    "name_ne": "पर्वत",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 152,
+    "name": "Syangja",
+    "name_ne": "स्याङ्जा",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 153,
+    "name": "Tanahu",
+    "name_ne": "तनहुँ",
+    "type": "District",
+    "parent": 104,
+    "level": 1
+  },
+  {
+    "id": 154,
+    "name": "Arghakhanchi",
+    "name_ne": "अर्घाखाँची",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 155,
+    "name": "Banke",
+    "name_ne": "बाँके",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 156,
+    "name": "Bardiya",
+    "name_ne": "बर्दिया",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 157,
+    "name": "Dang",
+    "name_ne": "दाङ",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 158,
+    "name": "Gulmi",
+    "name_ne": "गुल्मी",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 159,
+    "name": "Kapilbastu",
+    "name_ne": "कपिलवस्तु",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 160,
+    "name": "Palpa",
+    "name_ne": "पाल्पा",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 161,
+    "name": "Nawalparasi West",
+    "name_ne": "नवलपरासी पश्चिम",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 162,
+    "name": "Pyuthan",
+    "name_ne": "प्युठान",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 163,
+    "name": "Rolpa",
+    "name_ne": "रोल्पा",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 164,
+    "name": "Rukum East",
+    "name_ne": "रुकुम पूर्व",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 165,
+    "name": "Rupandehi",
+    "name_ne": "रुपन्देही",
+    "type": "District",
+    "parent": 105,
+    "level": 1
+  },
+  {
+    "id": 166,
+    "name": "Dailekh",
+    "name_ne": "दैलेख",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 167,
+    "name": "Dolpa",
+    "name_ne": "डोल्पा",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 168,
+    "name": "Humla",
+    "name_ne": "हुम्ला",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 169,
+    "name": "Jajarkot",
+    "name_ne": "जाजरकोट",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 170,
+    "name": "Jumla",
+    "name_ne": "जुम्ला",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 171,
+    "name": "Kalikot",
+    "name_ne": "कालिकोट",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 172,
+    "name": "Mugu",
+    "name_ne": "मुगु",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 173,
+    "name": "Rukum West",
+    "name_ne": "रुकुम पश्चिम",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 174,
+    "name": "Salyan",
+    "name_ne": "सल्यान",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 175,
+    "name": "Surkhet",
+    "name_ne": "सुर्खेत",
+    "type": "District",
+    "parent": 106,
+    "level": 1
+  },
+  {
+    "id": 176,
+    "name": "Achham",
+    "name_ne": "अछाम",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 177,
+    "name": "Baitadi",
+    "name_ne": "बैतडी",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 178,
+    "name": "Bajhang",
+    "name_ne": "बझाङ",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 179,
+    "name": "Bajura",
+    "name_ne": "बाजुरा",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 180,
+    "name": "Dadeldhura",
+    "name_ne": "डडेलधुरा",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 181,
+    "name": "Darchula",
+    "name_ne": "दार्चुला",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 182,
+    "name": "Doti",
+    "name_ne": "डोटी",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 183,
+    "name": "Kailali",
+    "name_ne": "कैलाली",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 184,
+    "name": "Kanchanpur",
+    "name_ne": "कञ्चनपुर",
+    "type": "District",
+    "parent": 107,
+    "level": 1
+  },
+  {
+    "id": 185,
+    "name": "Aamchowk",
+    "name_ne": "आमचोक",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 186,
+    "name": "Arun",
+    "name_ne": "अरुण",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 187,
+    "name": "Bhojpur",
+    "name_ne": "भोजपुर",
+    "type": "Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 188,
+    "name": "Hatuwagadhi",
+    "name_ne": "हतुवागढी",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 189,
+    "name": "Pauwadungma",
+    "name_ne": "पौवाडुङ्मा",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 190,
+    "name": "Ramprasad",
+    "name_ne": "रामप्रसाद",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 191,
+    "name": "Salpasilichho",
+    "name_ne": "सालपसिलिछो",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 192,
+    "name": "Shadananda",
+    "name_ne": "षडानन्द",
+    "type": "Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 193,
+    "name": "Temkemaiyung",
+    "name_ne": "टेम्केमाइयुङ",
+    "type": "Rural Municipality",
+    "parent": 108,
+    "level": 2
+  },
+  {
+    "id": 194,
+    "name": "Chaubise",
+    "name_ne": "चौबिसे",
+    "type": "Rural Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 195,
+    "name": "Chhathar Jorpati",
+    "name_ne": "छथर जोरपाटी",
+    "type": "Rural Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 196,
+    "name": "Dhankuta",
+    "name_ne": "धनकुटा",
+    "type": "Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 197,
+    "name": "Mahalaxmi",
+    "name_ne": "महालक्ष्मी",
+    "type": "Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 198,
+    "name": "Pakhribas",
+    "name_ne": "पाखरिबास",
+    "type": "Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 199,
+    "name": "Sangurigadhi",
+    "name_ne": "साँगुरीगढी",
+    "type": "Rural Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 200,
+    "name": "Shahidbhumi",
+    "name_ne": "शहिदभूमि",
+    "type": "Rural Municipality",
+    "parent": 109,
+    "level": 2
+  },
+  {
+    "id": 201,
+    "name": "Chulachuli",
+    "name_ne": "चुलाचुली",
+    "type": "Rural Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 202,
+    "name": "Deumai",
+    "name_ne": "देउमाई",
+    "type": "Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 203,
+    "name": "Fakphokthum",
+    "name_ne": "फाकफोक्थुम",
+    "type": "Rural Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 204,
+    "name": "Illam",
+    "name_ne": "इलाम",
+    "type": "Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 205,
+    "name": "Mai",
+    "name_ne": "माई",
+    "type": "Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 206,
+    "name": "Maijogmai",
+    "name_ne": "माइजोगमाई",
+    "type": "Rural Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 207,
+    "name": "Mangsebung",
+    "name_ne": "मङ्गेबुङ",
+    "type": "Rural Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 208,
+    "name": "Rong",
+    "name_ne": "रोङ",
+    "type": "Rural Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 209,
+    "name": "Sandakpur",
+    "name_ne": "सन्दकपुर",
+    "type": "Rural Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 210,
+    "name": "Suryodaya",
+    "name_ne": "सूर्योदय",
+    "type": "Municipality",
+    "parent": 110,
+    "level": 2
+  },
+  {
+    "id": 211,
+    "name": "Arjundhara",
+    "name_ne": "अर्जुनधारा",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 212,
+    "name": "Barhadashi",
+    "name_ne": "बाह्रदशी",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 213,
+    "name": "Bhadrapur",
+    "name_ne": "भद्रपुर",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 214,
+    "name": "Birtamod",
+    "name_ne": "बिर्तामोड",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 215,
+    "name": "Buddhashanti",
+    "name_ne": "बुद्धशान्ति",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 216,
+    "name": "Damak",
+    "name_ne": "दमक",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 217,
+    "name": "Gauradhaha",
+    "name_ne": "गौराधा",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 218,
+    "name": "Gauriganj",
+    "name_ne": "गौरीगञ्ज",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 219,
+    "name": "Haldibari",
+    "name_ne": "हल्दिबारी",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 220,
+    "name": "Jhapa",
+    "name_ne": "झापा",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 221,
+    "name": "Kachankawal",
+    "name_ne": "कचनकवल",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 222,
+    "name": "Kamal",
+    "name_ne": "कमल",
+    "type": "Rural Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 223,
+    "name": "Kankai",
+    "name_ne": "कनकाई",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 224,
+    "name": "Mechinagar",
+    "name_ne": "मेचीनगर",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 225,
+    "name": "Shivasataxi",
+    "name_ne": "शिवसताक्सी",
+    "type": "Municipality",
+    "parent": 111,
+    "level": 2
+  },
+  {
+    "id": 226,
+    "name": "Ainselukhark",
+    "name_ne": "ऐसेलुखर्क",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 227,
+    "name": "Barahapokhari",
+    "name_ne": "बराहापोखरी",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 228,
+    "name": "Diktel Rupakot Majhuwagadhi",
+    "name_ne": "दिक्तेल रुपाकोट मझुवागढी",
+    "type": "Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 229,
+    "name": "Diprung",
+    "name_ne": "डिप्रुङ",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 230,
+    "name": "Halesi Tuwachung",
+    "name_ne": "हलेसी तुवाचुङ",
+    "type": "Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 231,
+    "name": "Jantedhunga",
+    "name_ne": "जानतेढुङ्गा",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 232,
+    "name": "Kepilasagadhi",
+    "name_ne": "केपिलासगढी",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 233,
+    "name": "Khotehang",
+    "name_ne": "खोटेहाङ",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 234,
+    "name": "Rawa Besi",
+    "name_ne": "रवा बेसी",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 235,
+    "name": "Sakela",
+    "name_ne": "साकेला",
+    "type": "Rural Municipality",
+    "parent": 112,
+    "level": 2
+  },
+  {
+    "id": 236,
+    "name": "Belbari",
+    "name_ne": "बेलबारी",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 237,
+    "name": "Biratnagar",
+    "name_ne": "विराटनगर",
+    "type": "Metropolitan City",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 238,
+    "name": "Budhiganga",
+    "name_ne": "बुढीगंगा",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 239,
+    "name": "Dhanpalthan",
+    "name_ne": "धनपालथान",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 240,
+    "name": "Gramthan",
+    "name_ne": "ग्रामथान",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 241,
+    "name": "Jahada",
+    "name_ne": "जहादा",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 242,
+    "name": "Kanepokhari",
+    "name_ne": "कानेपोखरी",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 243,
+    "name": "Katahari",
+    "name_ne": "कटहरी",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 244,
+    "name": "Kerabari",
+    "name_ne": "केराबारी",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 245,
+    "name": "Letang",
+    "name_ne": "लेटाङ",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 246,
+    "name": "Miklajung",
+    "name_ne": "मिक्लाजुङ",
+    "type": "Rural Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 247,
+    "name": "Pathari Shanishchare",
+    "name_ne": "पथरी शनिश्चरे",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 248,
+    "name": "Rangeli",
+    "name_ne": "रंगेली",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 249,
+    "name": "Ratuwamai",
+    "name_ne": "रतुवामाई",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 250,
+    "name": "Sundarharaicha",
+    "name_ne": "सुन्दरहरैचा",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 251,
+    "name": "Sunwarshi",
+    "name_ne": "सुनवर्शी",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 252,
+    "name": "Uralabari",
+    "name_ne": "उरालाबारी",
+    "type": "Municipality",
+    "parent": 113,
+    "level": 2
+  },
+  {
+    "id": 253,
+    "name": "Champadevi",
+    "name_ne": "चम्पादेवी",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 254,
+    "name": "Chisankhugadhi",
+    "name_ne": "चिसंखुगढी",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 255,
+    "name": "Khijidemba",
+    "name_ne": "खिजिदेम्बा",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 256,
+    "name": "Likhu",
+    "name_ne": "लिखु",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 257,
+    "name": "Manebhanjyang",
+    "name_ne": "मानेभञ्ज्याङ",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 258,
+    "name": "Molung",
+    "name_ne": "मोलुङ",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 259,
+    "name": "Siddhicharan",
+    "name_ne": "सिद्धिचरण",
+    "type": "Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 260,
+    "name": "Sunkoshi",
+    "name_ne": "सुनकोशी",
+    "type": "Rural Municipality",
+    "parent": 114,
+    "level": 2
+  },
+  {
+    "id": 261,
+    "name": "Falelung",
+    "name_ne": "फालेलुङ",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 262,
+    "name": "Falgunanda",
+    "name_ne": "फाल्गुनन्द",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 263,
+    "name": "Hilihang",
+    "name_ne": "हिलिहाङ",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 264,
+    "name": "Kummayak",
+    "name_ne": "कुमायक",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 265,
+    "name": "Miklajung",
+    "name_ne": "मिक्लाजुङ",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 266,
+    "name": "Phidim",
+    "name_ne": "फिदिम",
+    "type": "Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 267,
+    "name": "Tumbewa",
+    "name_ne": "तुम्बेवा",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 268,
+    "name": "Yangwarak",
+    "name_ne": "याङ्गवारक",
+    "type": "Rural Municipality",
+    "parent": 115,
+    "level": 2
+  },
+  {
+    "id": 269,
+    "name": "Bhotkhola",
+    "name_ne": "भोटखोला",
+    "type": "Rural Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 270,
+    "name": "Chainpur",
+    "name_ne": "चैनपुर",
+    "type": "Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 271,
+    "name": "Chichila",
+    "name_ne": "चिचिला",
+    "type": "Rural Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 272,
+    "name": "Dharmadevi",
+    "name_ne": "धर्मदेवी",
+    "type": "Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 273,
+    "name": "Khandbari",
+    "name_ne": "खाँदबारी",
+    "type": "Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 274,
+    "name": "Madi",
+    "name_ne": "माडी",
+    "type": "Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 275,
+    "name": "Makalu",
+    "name_ne": "मकालु",
+    "type": "Rural Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 276,
+    "name": "Panchakhapan",
+    "name_ne": "पञ्चखापन",
+    "type": "Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 277,
+    "name": "Sabhapokhari",
+    "name_ne": "सभापोखरी",
+    "type": "Rural Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 278,
+    "name": "Silichong",
+    "name_ne": "सिलिचङ",
+    "type": "Rural Municipality",
+    "parent": 116,
+    "level": 2
+  },
+  {
+    "id": 279,
+    "name": "Khumbupasanglahmu",
+    "name_ne": "खुम्बुपसङ्लाहमु",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 280,
+    "name": "Likhupike",
+    "name_ne": "लिखुपिके",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 281,
+    "name": "Maapya Dudhkoshi",
+    "name_ne": "माप्या दुधकोशी",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 282,
+    "name": "Mahakulung",
+    "name_ne": "महाकुलुङ",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 283,
+    "name": "Nechasalyan",
+    "name_ne": "नेचासल्यान",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 284,
+    "name": "Solududhakunda",
+    "name_ne": "सोलुदुधाकुण्ड",
+    "type": "Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 285,
+    "name": "Sotang",
+    "name_ne": "सोटाङ",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 286,
+    "name": "Thulung Dudhkoshi",
+    "name_ne": "थुलुङ दुधकोशी",
+    "type": "Rural Municipality",
+    "parent": 117,
+    "level": 2
+  },
+  {
+    "id": 287,
+    "name": "Barahchhetra",
+    "name_ne": "बराहक्षेत्र",
+    "type": "Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 288,
+    "name": "Barju",
+    "name_ne": "बर्जु",
+    "type": "Rural Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 289,
+    "name": "Bhokraha Narsing",
+    "name_ne": "भोक्राहा नरसिङ्ग",
+    "type": "Rural Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 290,
+    "name": "Dewanganj",
+    "name_ne": "देवानगन्ज",
+    "type": "Rural Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 291,
+    "name": "Dharan",
+    "name_ne": "धरान",
+    "type": "Sub-Metropolitan City",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 292,
+    "name": "Duhabi",
+    "name_ne": "दुहबी",
+    "type": "Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 293,
+    "name": "Gadhi",
+    "name_ne": "गढी",
+    "type": "Rural Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 294,
+    "name": "Harinagar",
+    "name_ne": "हरिनगर",
+    "type": "Rural Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 295,
+    "name": "Inaruwa",
+    "name_ne": "इनरुवा",
+    "type": "Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 296,
+    "name": "Itahari",
+    "name_ne": "इटहरी",
+    "type": "Sub-Metropolitan City",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 297,
+    "name": "Koshi",
+    "name_ne": "कोशी",
+    "type": "Rural Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 298,
+    "name": "Ramdhuni",
+    "name_ne": "रामधुनी",
+    "type": "Municipality",
+    "parent": 118,
+    "level": 2
+  },
+  {
+    "id": 299,
+    "name": "Aathrai Tribeni",
+    "name_ne": "आठराई त्रिवेणी",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 300,
+    "name": "Maiwakhola",
+    "name_ne": "माइवाखोला",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 301,
+    "name": "Meringden",
+    "name_ne": "Meringden",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 302,
+    "name": "Mikwakhola",
+    "name_ne": "मिक्वाखोला",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 303,
+    "name": "Pathivara Yangwarak",
+    "name_ne": "पाथिवरा यांगवारक",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 304,
+    "name": "Phaktanglung",
+    "name_ne": "फाक्ताङलुङ",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 305,
+    "name": "Phungling",
+    "name_ne": "फुङ्लिङ",
+    "type": "Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 306,
+    "name": "Sidingba",
+    "name_ne": "सिडिङबा",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 307,
+    "name": "Sirijangha",
+    "name_ne": "सिरिजाङ्घा",
+    "type": "Rural Municipality",
+    "parent": 119,
+    "level": 2
+  },
+  {
+    "id": 308,
+    "name": "Aathrai",
+    "name_ne": "आठराई",
+    "type": "Rural Municipality",
+    "parent": 120,
+    "level": 2
+  },
+  {
+    "id": 309,
+    "name": "Chhathar",
+    "name_ne": "छथर",
+    "type": "Rural Municipality",
+    "parent": 120,
+    "level": 2
+  },
+  {
+    "id": 310,
+    "name": "Laligurans",
+    "name_ne": "लालीगुराँस",
+    "type": "Municipality",
+    "parent": 120,
+    "level": 2
+  },
+  {
+    "id": 311,
+    "name": "Menchayam",
+    "name_ne": "मेन्चायम",
+    "type": "Rural Municipality",
+    "parent": 120,
+    "level": 2
+  },
+  {
+    "id": 312,
+    "name": "Myanglung",
+    "name_ne": "म्याङलुङ",
+    "type": "Municipality",
+    "parent": 120,
+    "level": 2
+  },
+  {
+    "id": 313,
+    "name": "Phedap",
+    "name_ne": "फेडाप",
+    "type": "Rural Municipality",
+    "parent": 120,
+    "level": 2
+  },
+  {
+    "id": 314,
+    "name": "Belaka",
+    "name_ne": "बेलका",
+    "type": "Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 315,
+    "name": "Chaudandigadhi",
+    "name_ne": "चौदण्डीगढी",
+    "type": "Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 316,
+    "name": "Katari",
+    "name_ne": "कटारी",
+    "type": "Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 317,
+    "name": "Limchungbung",
+    "name_ne": "लिम्चुङबुङ",
+    "type": "Rural Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 318,
+    "name": "Rautamai",
+    "name_ne": "रौतामाई",
+    "type": "Rural Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 319,
+    "name": "Tapli",
+    "name_ne": "तापली",
+    "type": "Rural Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 320,
+    "name": "Triyuga",
+    "name_ne": "त्रियुग",
+    "type": "Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 321,
+    "name": "Udayapurgadhi",
+    "name_ne": "उदयपुरगढी",
+    "type": "Rural Municipality",
+    "parent": 121,
+    "level": 2
+  },
+  {
+    "id": 322,
+    "name": "Adarsh kotwal",
+    "name_ne": "आदर्श कोतवाल",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 323,
+    "name": "Baragadhi",
+    "name_ne": "बारागढी",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 324,
+    "name": "Bishrampur",
+    "name_ne": "बिश्रामपुर",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 325,
+    "name": "Devtal",
+    "name_ne": "देवताल",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 326,
+    "name": "Jitpursimara",
+    "name_ne": "जितपुरसिमारा",
+    "type": "Sub-Metropolitan City",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 327,
+    "name": "Kalaiya",
+    "name_ne": "कलैया",
+    "type": "Sub-Metropolitan City",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 328,
+    "name": "Karaiyamai",
+    "name_ne": "करैयामाई",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 329,
+    "name": "Kolhabi",
+    "name_ne": "कोल्हाबी",
+    "type": "Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 330,
+    "name": "Mahagadhimai",
+    "name_ne": "महागढीमाई",
+    "type": "Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 331,
+    "name": "Nijgadh",
+    "name_ne": "निजगढ",
+    "type": "Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 332,
+    "name": "Pacharauta",
+    "name_ne": "पचरौता",
+    "type": "Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 333,
+    "name": "Parwanipur",
+    "name_ne": "परवानीपुर",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 334,
+    "name": "Pheta",
+    "name_ne": "फेटा",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 335,
+    "name": "Prasauni",
+    "name_ne": "प्रसौनी",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 336,
+    "name": "Simraungadh",
+    "name_ne": "सिम्रौनगढ",
+    "type": "Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 337,
+    "name": "Suwarna",
+    "name_ne": "सुवर्ण",
+    "type": "Rural Municipality",
+    "parent": 122,
+    "level": 2
+  },
+  {
+    "id": 338,
+    "name": "Aaurahi",
+    "name_ne": "औराही",
+    "type": "Rural Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 339,
+    "name": "Bateshwor",
+    "name_ne": "बटेश्वर",
+    "type": "Rural Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 340,
+    "name": "Bideha",
+    "name_ne": "बिदेहा",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 341,
+    "name": "Chhireshwarnath",
+    "name_ne": "क्षिरेश्वरनाथ",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 342,
+    "name": "Dhanauji",
+    "name_ne": "धनौजी",
+    "type": "Rural Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 343,
+    "name": "Dhanusadham",
+    "name_ne": "धनुषाधाम",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 344,
+    "name": "Ganeshman Charnath",
+    "name_ne": "गणेशमान चारनाथ",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 345,
+    "name": "Hansapur",
+    "name_ne": "हंसपुर",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 346,
+    "name": "Janaknandani",
+    "name_ne": "जनकनन्दनी",
+    "type": "Rural Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 347,
+    "name": "Janakpurdham",
+    "name_ne": "जनकपुरधाम",
+    "type": "Sub-Metropolitan City",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 348,
+    "name": "Kamala",
+    "name_ne": "कमला",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 349,
+    "name": "Lakshminiya",
+    "name_ne": "लक्ष्मीनिया",
+    "type": "Rural Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 350,
+    "name": "Mithila",
+    "name_ne": "मिथिला",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 351,
+    "name": "Mithila Bihari",
+    "name_ne": "मिथिला बिहारी",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 352,
+    "name": "Mukhiyapatti Musarmiya",
+    "name_ne": "मुखियापट्टी मुसरमिया",
+    "type": "Rural Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 353,
+    "name": "Nagarain",
+    "name_ne": "नगराई",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 354,
+    "name": "Sabaila",
+    "name_ne": "सबाइला",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 355,
+    "name": "Sahidnagar",
+    "name_ne": "सहिदनगर",
+    "type": "Municipality",
+    "parent": 123,
+    "level": 2
+  },
+  {
+    "id": 356,
+    "name": "Aurahi",
+    "name_ne": "औरही",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 357,
+    "name": "Balwa",
+    "name_ne": "बलवा",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 358,
+    "name": "Bardibas",
+    "name_ne": "बर्दिवास",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 359,
+    "name": "Bhangaha",
+    "name_ne": "भङ्गाहा",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 360,
+    "name": "Ekdanra",
+    "name_ne": "एकडानरा",
+    "type": "Rural Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 361,
+    "name": "Gaushala",
+    "name_ne": "गौशाला",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 362,
+    "name": "Jaleswor",
+    "name_ne": "जलेश्वर",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 363,
+    "name": "Loharpatti",
+    "name_ne": "लोहारपट्टी",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 364,
+    "name": "Mahottari",
+    "name_ne": "महोत्तरी",
+    "type": "Rural Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 365,
+    "name": "Manra Siswa",
+    "name_ne": "मनरा सिसवा",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 366,
+    "name": "Matihani",
+    "name_ne": "मटिहानी",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 367,
+    "name": "Pipra",
+    "name_ne": "पिपरा",
+    "type": "Rural Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 368,
+    "name": "Ramgopalpur",
+    "name_ne": "रामगोपालपुर",
+    "type": "Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 369,
+    "name": "Samsi",
+    "name_ne": "सम्सी",
+    "type": "Rural Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 370,
+    "name": "Sonama",
+    "name_ne": "सोनामा",
+    "type": "Rural Municipality",
+    "parent": 124,
+    "level": 2
+  },
+  {
+    "id": 371,
+    "name": "Bahudaramai",
+    "name_ne": "बहुदरमाई",
+    "type": "Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 372,
+    "name": "Bindabasini",
+    "name_ne": "बिन्दवासिनी",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 373,
+    "name": "Birgunj",
+    "name_ne": "वीरगन्ज",
+    "type": "Metropolitan City",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 374,
+    "name": "Chhipaharmai",
+    "name_ne": "छिपहरमाई",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 375,
+    "name": "Dhobini",
+    "name_ne": "धोबिनी",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 376,
+    "name": "Jagarnathpur",
+    "name_ne": "जगरनाथपुर",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 377,
+    "name": "Jirabhawani",
+    "name_ne": "जिरभवानी",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 378,
+    "name": "Kalikamai",
+    "name_ne": "कालिकामाई",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 379,
+    "name": "Pakaha mainpur",
+    "name_ne": "पकाहा मेनपुर",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 380,
+    "name": "Parsagadhi",
+    "name_ne": "पर्सागढी",
+    "type": "Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 381,
+    "name": "Paterwa sugauli",
+    "name_ne": "पटेरवा सुगौली",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 382,
+    "name": "Pokhariya",
+    "name_ne": "पोखरिया",
+    "type": "Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 383,
+    "name": "Sakhuwa Prasauni",
+    "name_ne": "सखुवा प्रसौनी",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 384,
+    "name": "Thori",
+    "name_ne": "थोरी",
+    "type": "Rural Municipality",
+    "parent": 125,
+    "level": 2
+  },
+  {
+    "id": 385,
+    "name": "Baudhimai",
+    "name_ne": "बौधिमाई",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 386,
+    "name": "Brindaban",
+    "name_ne": "वृन्दबन",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 387,
+    "name": "Chandrapur",
+    "name_ne": "चन्द्रपुर",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 388,
+    "name": "Dewahi Gonahi",
+    "name_ne": "देवाही गोनाही",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 389,
+    "name": "Durga Bhagwati",
+    "name_ne": "दुर्गा भगवती",
+    "type": "Rural Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 390,
+    "name": "Gadhimai",
+    "name_ne": "गढीमाई",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 391,
+    "name": "Garuda",
+    "name_ne": "गरुड",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 392,
+    "name": "Gaur",
+    "name_ne": "गौर",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 393,
+    "name": "Gujara",
+    "name_ne": "गुजरा",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 394,
+    "name": "Ishanath",
+    "name_ne": "ईशानाथ",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 395,
+    "name": "Katahariya",
+    "name_ne": "कटहरिया",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 396,
+    "name": "Madhav Narayan",
+    "name_ne": "माधव नारायण",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 397,
+    "name": "Maulapur",
+    "name_ne": "मौलापुर",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 398,
+    "name": "Paroha",
+    "name_ne": "पारोहा",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 399,
+    "name": "Phatuwa Bijayapur",
+    "name_ne": "विजयपुर फटुवा",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 400,
+    "name": "Rajdevi",
+    "name_ne": "राजदेवी",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 401,
+    "name": "Rajpur",
+    "name_ne": "राजपुर",
+    "type": "Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 402,
+    "name": "Yemunamai",
+    "name_ne": "यमुनामाई",
+    "type": "Rural Municipality",
+    "parent": 126,
+    "level": 2
+  },
+  {
+    "id": 403,
+    "name": "Agnisair Krishna Savaran",
+    "name_ne": "अग्निशैर कृष्ण सावरण",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 404,
+    "name": "Balan Bihul",
+    "name_ne": "बालन बिहुल",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 405,
+    "name": "Bishnupur",
+    "name_ne": "विष्णुपुर",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 406,
+    "name": "Bode Barsain",
+    "name_ne": "बोडे बार्सैन",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 407,
+    "name": "Chhinnamasta",
+    "name_ne": "छिन्नमस्ता",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 408,
+    "name": "Dakneshwori",
+    "name_ne": "डाक्नेश्वरी",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 409,
+    "name": "Hanumannagar Kankalini",
+    "name_ne": "हनुमाननगर कंकालिनी",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 410,
+    "name": "Kanchanrup",
+    "name_ne": "कञ्चनरुप",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 411,
+    "name": "Khadak",
+    "name_ne": "खडक",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 412,
+    "name": "Mahadeva",
+    "name_ne": "महादेव",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 413,
+    "name": "Rajbiraj",
+    "name_ne": "राजविराज",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 414,
+    "name": "Rajgadh",
+    "name_ne": "राजगढ",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 415,
+    "name": "Rupani",
+    "name_ne": "रुपानी",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 416,
+    "name": "Saptakoshi",
+    "name_ne": "सप्तकोशी",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 417,
+    "name": "Shambhunath",
+    "name_ne": "शम्भुनाथ",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 418,
+    "name": "Surunga",
+    "name_ne": "सुरुङ्गा",
+    "type": "Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 419,
+    "name": "Tilathi Koiladi",
+    "name_ne": "तिलाठी कोइलाडी",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 420,
+    "name": "Tirahut",
+    "name_ne": "तिराहुत",
+    "type": "Rural Municipality",
+    "parent": 127,
+    "level": 2
+  },
+  {
+    "id": 421,
+    "name": "Bagmati",
+    "name_ne": "बागमती",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 422,
+    "name": "Balara",
+    "name_ne": "बलरा",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 423,
+    "name": "Barahathawa",
+    "name_ne": "बराहथवा",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 424,
+    "name": "Basbariya",
+    "name_ne": "बासबरिया",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 425,
+    "name": "Bishnu",
+    "name_ne": "विष्णु",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 426,
+    "name": "Bramhapuri",
+    "name_ne": "ब्रम्हपुरी",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 427,
+    "name": "Chakraghatta",
+    "name_ne": "चक्रघट्टा",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 428,
+    "name": "Chandranagar",
+    "name_ne": "चन्द्रनगर",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 429,
+    "name": "Dhankaul",
+    "name_ne": "धनकौल",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 430,
+    "name": "Godaita",
+    "name_ne": "गोदैता",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 431,
+    "name": "Haripur",
+    "name_ne": "हरिपुर",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 432,
+    "name": "Haripurwa",
+    "name_ne": "हरिपुरवा",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 433,
+    "name": "Hariwan",
+    "name_ne": "हरिवान",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 434,
+    "name": "Ishworpur",
+    "name_ne": "ईश्वरपुर",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 435,
+    "name": "Kabilasi",
+    "name_ne": "कबिलासी",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 436,
+    "name": "Kaudena",
+    "name_ne": "कौडेना",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 437,
+    "name": "Lalbandi",
+    "name_ne": "लालबन्दी",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 438,
+    "name": "Malangawa",
+    "name_ne": "मलङ्गवा",
+    "type": "Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 439,
+    "name": "Parsa",
+    "name_ne": "पर्सा",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 440,
+    "name": "Ramnagar",
+    "name_ne": "रामनगर",
+    "type": "Rural Municipality",
+    "parent": 128,
+    "level": 2
+  },
+  {
+    "id": 441,
+    "name": "Arnama",
+    "name_ne": "अर्नामा",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 442,
+    "name": "Aurahi",
+    "name_ne": "औरही",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 443,
+    "name": "Bariyarpatti",
+    "name_ne": "बरियारपट्टी",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 444,
+    "name": "Bhagawanpur",
+    "name_ne": "भगवानपुर",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 445,
+    "name": "Bishnupur",
+    "name_ne": "विष्णुपुर",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 446,
+    "name": "Dhangadhimai",
+    "name_ne": "धनगढीमाई",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 447,
+    "name": "Golbazar",
+    "name_ne": "गोलबजार",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 448,
+    "name": "Kalyanpur",
+    "name_ne": "कल्याणपुर",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 449,
+    "name": "Karjanha",
+    "name_ne": "कर्जन्हा",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 450,
+    "name": "Lahan",
+    "name_ne": "लहान",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 451,
+    "name": "Laxmipur Patari",
+    "name_ne": "लक्ष्मीपुर पटारी",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 452,
+    "name": "Mirchaiya",
+    "name_ne": "मिर्चैया",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 453,
+    "name": "Naraha",
+    "name_ne": "नरहा",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 454,
+    "name": "Nawarajpur",
+    "name_ne": "नवराजपुर",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 455,
+    "name": "Sakhuwanankarkatti",
+    "name_ne": "सखुवानङ्करकट्टी",
+    "type": "Rural Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 456,
+    "name": "Siraha",
+    "name_ne": "सिरहा",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 457,
+    "name": "Sukhipur",
+    "name_ne": "सुखीपुर",
+    "type": "Municipality",
+    "parent": 129,
+    "level": 2
+  },
+  {
+    "id": 458,
+    "name": "Bhaktapur",
+    "name_ne": "भक्तपुर",
+    "type": "Municipality",
+    "parent": 130,
+    "level": 2
+  },
+  {
+    "id": 459,
+    "name": "Changunarayan",
+    "name_ne": "चाँगुनारायण",
+    "type": "Municipality",
+    "parent": 130,
+    "level": 2
+  },
+  {
+    "id": 460,
+    "name": "Madhyapur Thimi",
+    "name_ne": "मध्यपुरथिमि",
+    "type": "Municipality",
+    "parent": 130,
+    "level": 2
+  },
+  {
+    "id": 461,
+    "name": "Suryabinayak",
+    "name_ne": "सूर्यविनायक",
+    "type": "Municipality",
+    "parent": 130,
+    "level": 2
+  },
+  {
+    "id": 462,
+    "name": "Bharatpur",
+    "name_ne": "भरतपुर",
+    "type": "Metropolitan City",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 463,
+    "name": "Ichchhyakamana",
+    "name_ne": "इच्छाकामना",
+    "type": "Rural Municipality",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 464,
+    "name": "Kalika",
+    "name_ne": "कालिका",
+    "type": "Municipality",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 465,
+    "name": "Khairahani",
+    "name_ne": "खैरहनी",
+    "type": "Municipality",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 466,
+    "name": "Madi",
+    "name_ne": "माडी",
+    "type": "Municipality",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 467,
+    "name": "Rapti",
+    "name_ne": "राप्ती",
+    "type": "Municipality",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 468,
+    "name": "Ratnanagar",
+    "name_ne": "रत्ननगर",
+    "type": "Municipality",
+    "parent": 131,
+    "level": 2
+  },
+  {
+    "id": 469,
+    "name": "Benighat Rorang",
+    "name_ne": "बेनिघाट रोराङ",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 470,
+    "name": "Dhunibesi",
+    "name_ne": "धुनिबेसी",
+    "type": "Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 471,
+    "name": "Gajuri",
+    "name_ne": "गजुरी",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 472,
+    "name": "Galchi",
+    "name_ne": "गाल्ची",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 473,
+    "name": "Gangajamuna",
+    "name_ne": "गंगाजमुना",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 474,
+    "name": "Jwalamukhi",
+    "name_ne": "ज्वालामुखी",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 475,
+    "name": "Khaniyabash",
+    "name_ne": "खनियाबास",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 476,
+    "name": "Netrawati Dabjong",
+    "name_ne": "नेत्रावती डब्जोङ",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 477,
+    "name": "Nilakantha",
+    "name_ne": "नीलकण्ठ",
+    "type": "Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 478,
+    "name": "Rubi Valley",
+    "name_ne": "रुबी उपत्यका",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 479,
+    "name": "Siddhalek",
+    "name_ne": "सिद्धलेक",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 480,
+    "name": "Thakre",
+    "name_ne": "ठाकरे",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 481,
+    "name": "Tripura Sundari",
+    "name_ne": "त्रिपुरा सुन्दरी",
+    "type": "Rural Municipality",
+    "parent": 132,
+    "level": 2
+  },
+  {
+    "id": 482,
+    "name": "Baiteshwor",
+    "name_ne": "बैतेश्वर",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 483,
+    "name": "Bhimeshwor",
+    "name_ne": "भीमेश्वर",
+    "type": "Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 484,
+    "name": "Bigu",
+    "name_ne": "बिगु",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 485,
+    "name": "Gaurishankar",
+    "name_ne": "गौरीशंकर",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 486,
+    "name": "Jiri",
+    "name_ne": "जिरी",
+    "type": "Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 487,
+    "name": "Kalinchok",
+    "name_ne": "कालिञ्चोक",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 488,
+    "name": "Melung",
+    "name_ne": "मेलुङ",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 489,
+    "name": "Sailung",
+    "name_ne": "सेलुङ",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 490,
+    "name": "Tamakoshi",
+    "name_ne": "तामाकोशी",
+    "type": "Rural Municipality",
+    "parent": 133,
+    "level": 2
+  },
+  {
+    "id": 491,
+    "name": "Budhanilakantha",
+    "name_ne": "बुढानिलकण्ठ",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 492,
+    "name": "Chandragiri",
+    "name_ne": "चन्द्रागिरि",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 493,
+    "name": "Dakshinkali",
+    "name_ne": "दक्षिणकाली",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 494,
+    "name": "Gokarneshwor",
+    "name_ne": "गोकर्णेश्वर",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 495,
+    "name": "Kageshwori Manahora",
+    "name_ne": "कागेश्वरी मनहोरा",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 496,
+    "name": "Kathmandu",
+    "name_ne": "काठमाडौं ।",
+    "type": "Metropolitan City",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 497,
+    "name": "Kirtipur",
+    "name_ne": "कीर्तिपुर",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 498,
+    "name": "Nagarjun",
+    "name_ne": "नागार्जुन",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 499,
+    "name": "Shankharapur",
+    "name_ne": "शंखरापुर",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 500,
+    "name": "Tarakeshwor",
+    "name_ne": "तारकेश्वर",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 501,
+    "name": "Tokha",
+    "name_ne": "टोखा",
+    "type": "Municipality",
+    "parent": 134,
+    "level": 2
+  },
+  {
+    "id": 502,
+    "name": "Banepa",
+    "name_ne": "बनेपा",
+    "type": "Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 503,
+    "name": "Bethanchowk",
+    "name_ne": "बेथानचोक",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 504,
+    "name": "Bhumlu",
+    "name_ne": "भुम्लु",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 505,
+    "name": "Chaurideurali",
+    "name_ne": "चौरीदेउराली",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 506,
+    "name": "Dhulikhel",
+    "name_ne": "धुलिखेल",
+    "type": "Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 507,
+    "name": "Khanikhola",
+    "name_ne": "खानीखोला",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 508,
+    "name": "Mahabharat",
+    "name_ne": "महाभारत",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 509,
+    "name": "Mandandeupur",
+    "name_ne": "मण्डनदेउपुर",
+    "type": "Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 510,
+    "name": "Namobuddha",
+    "name_ne": "नमोबुद्ध",
+    "type": "Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 511,
+    "name": "Panauti",
+    "name_ne": "पनौती",
+    "type": "Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 512,
+    "name": "Panchkhal",
+    "name_ne": "पाँचखाल",
+    "type": "Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 513,
+    "name": "Roshi",
+    "name_ne": "रोशी",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 514,
+    "name": "Temal",
+    "name_ne": "तेमल",
+    "type": "Rural Municipality",
+    "parent": 135,
+    "level": 2
+  },
+  {
+    "id": 515,
+    "name": "Bagmati",
+    "name_ne": "बागमती",
+    "type": "Rural Municipality",
+    "parent": 136,
+    "level": 2
+  },
+  {
+    "id": 516,
+    "name": "Godawari",
+    "name_ne": "गोदावरी",
+    "type": "Municipality",
+    "parent": 136,
+    "level": 2
+  },
+  {
+    "id": 517,
+    "name": "Konjyosom",
+    "name_ne": "कोन्ज्योसोम",
+    "type": "Rural Municipality",
+    "parent": 136,
+    "level": 2
+  },
+  {
+    "id": 518,
+    "name": "Lalitpur",
+    "name_ne": "ललितपुर",
+    "type": "Metropolitan City",
+    "parent": 136,
+    "level": 2
+  },
+  {
+    "id": 519,
+    "name": "Mahalaxmi",
+    "name_ne": "महालक्ष्मी",
+    "type": "Municipality",
+    "parent": 136,
+    "level": 2
+  },
+  {
+    "id": 520,
+    "name": "Mahankal",
+    "name_ne": "महांकाल",
+    "type": "Rural Municipality",
+    "parent": 136,
+    "level": 2
+  },
+  {
+    "id": 521,
+    "name": "Bagmati",
+    "name_ne": "बागमती",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 522,
+    "name": "Bakaiya",
+    "name_ne": "बकैया",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 523,
+    "name": "Bhimphedi",
+    "name_ne": "भीमफेदी",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 524,
+    "name": "Hetauda",
+    "name_ne": "हेटौंडा",
+    "type": "Sub-Metropolitan City",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 525,
+    "name": "Indrasarowar",
+    "name_ne": "इन्द्रसरोवर",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 526,
+    "name": "Kailash",
+    "name_ne": "कैलाश",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 527,
+    "name": "Makawanpurgadhi",
+    "name_ne": "मकवानपुरगढी",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 528,
+    "name": "Manahari",
+    "name_ne": "मनहरी",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 529,
+    "name": "Raksirang",
+    "name_ne": "रक्सिराङ",
+    "type": "Rural Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 530,
+    "name": "Thaha",
+    "name_ne": "थाहा",
+    "type": "Municipality",
+    "parent": 137,
+    "level": 2
+  },
+  {
+    "id": 531,
+    "name": "Belkotgadhi",
+    "name_ne": "बेलकोटगढी",
+    "type": "Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 532,
+    "name": "Bidur",
+    "name_ne": "बिदुर",
+    "type": "Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 533,
+    "name": "Dupcheshwar",
+    "name_ne": "दुप्चेश्वर",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 534,
+    "name": "Kakani",
+    "name_ne": "ककनी",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 535,
+    "name": "Kispang",
+    "name_ne": "किस्पाङ",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 536,
+    "name": "Likhu",
+    "name_ne": "लिखु",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 537,
+    "name": "Myagang",
+    "name_ne": "म्यागाङ",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 538,
+    "name": "Panchakanya",
+    "name_ne": "पञ्चकन्या",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 539,
+    "name": "Shivapuri",
+    "name_ne": "शिवपुरी",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 540,
+    "name": "Suryagadhi",
+    "name_ne": "सुर्यगढी",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 541,
+    "name": "Tadi",
+    "name_ne": "ताडी",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 542,
+    "name": "Tarkeshwar",
+    "name_ne": "तारकेश्वर",
+    "type": "Rural Municipality",
+    "parent": 138,
+    "level": 2
+  },
+  {
+    "id": 543,
+    "name": "Doramba",
+    "name_ne": "दोरम्बा",
+    "type": "Rural Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 544,
+    "name": "Gokulganga",
+    "name_ne": "गोकुलगंगा",
+    "type": "Rural Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 545,
+    "name": "Khadadevi",
+    "name_ne": "खाडादेवी",
+    "type": "Rural Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 546,
+    "name": "Likhu Tamakoshi",
+    "name_ne": "लिखु तामाकोशी",
+    "type": "Rural Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 547,
+    "name": "Manthali",
+    "name_ne": "मन्थली",
+    "type": "Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 548,
+    "name": "Ramechhap",
+    "name_ne": "रामेछाप",
+    "type": "Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 549,
+    "name": "Sunapati",
+    "name_ne": "सुनापति",
+    "type": "Rural Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 550,
+    "name": "Umakunda",
+    "name_ne": "उमाकुण्ड",
+    "type": "Rural Municipality",
+    "parent": 139,
+    "level": 2
+  },
+  {
+    "id": 551,
+    "name": "Amachodingmo",
+    "name_ne": "अमाकोडिङमो",
+    "type": "Rural Municipality",
+    "parent": 140,
+    "level": 2
+  },
+  {
+    "id": 552,
+    "name": "Gosaikunda",
+    "name_ne": "गोसाइकुण्ड",
+    "type": "Rural Municipality",
+    "parent": 140,
+    "level": 2
+  },
+  {
+    "id": 553,
+    "name": "Kalika",
+    "name_ne": "कालिका",
+    "type": "Rural Municipality",
+    "parent": 140,
+    "level": 2
+  },
+  {
+    "id": 554,
+    "name": "Naukunda",
+    "name_ne": "नौकुण्ड",
+    "type": "Rural Municipality",
+    "parent": 140,
+    "level": 2
+  },
+  {
+    "id": 555,
+    "name": "Uttargaya",
+    "name_ne": "उत्तरगया",
+    "type": "Rural Municipality",
+    "parent": 140,
+    "level": 2
+  },
+  {
+    "id": 556,
+    "name": "Dudhouli",
+    "name_ne": "दुधौली",
+    "type": "Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 557,
+    "name": "Ghanglekh",
+    "name_ne": "घाङ्लेख",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 558,
+    "name": "Golanjor",
+    "name_ne": "गोलन्जोर",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 559,
+    "name": "Hariharpurgadhi",
+    "name_ne": "हरिहरपुरगढी",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 560,
+    "name": "Kamalamai",
+    "name_ne": "कमलामाई",
+    "type": "Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 561,
+    "name": "Marin",
+    "name_ne": "मारिन",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 562,
+    "name": "Phikkal",
+    "name_ne": "फिक्कल",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 563,
+    "name": "Sunkoshi",
+    "name_ne": "सुनकोशी",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 564,
+    "name": "Tinpatan",
+    "name_ne": "तिनपाटन",
+    "type": "Rural Municipality",
+    "parent": 141,
+    "level": 2
+  },
+  {
+    "id": 565,
+    "name": "Balefi",
+    "name_ne": "बलेफी",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 566,
+    "name": "Barhabise",
+    "name_ne": "बाह्रबिसे",
+    "type": "Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 567,
+    "name": "Bhotekoshi",
+    "name_ne": "भोटेकोशी",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 568,
+    "name": "Chautara SangachokGadhi",
+    "name_ne": "चौतारा साँगाचोकगढी",
+    "type": "Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 569,
+    "name": "Helambu",
+    "name_ne": "हेलम्बु",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 570,
+    "name": "Indrawati",
+    "name_ne": "इन्द्रावती",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 571,
+    "name": "Jugal",
+    "name_ne": "जुगल",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 572,
+    "name": "Lisangkhu",
+    "name_ne": "लिसाङ्खु",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 573,
+    "name": "Melamchi",
+    "name_ne": "मेलम्ची",
+    "type": "Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 574,
+    "name": "Panchpokhari Thangpal",
+    "name_ne": "पाँचपोखरी थाङ्पाल",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 575,
+    "name": "Sunkoshi",
+    "name_ne": "सुनकोशी",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 576,
+    "name": "Tripurasundari",
+    "name_ne": "त्रिपुरासुन्दरी",
+    "type": "Rural Municipality",
+    "parent": 142,
+    "level": 2
+  },
+  {
+    "id": 577,
+    "name": "Badigad",
+    "name_ne": "बडिगाड",
+    "type": "Rural Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 578,
+    "name": "Baglung",
+    "name_ne": "बाग्लुङ",
+    "type": "Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 579,
+    "name": "Bareng",
+    "name_ne": "बरेङ",
+    "type": "Rural Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 580,
+    "name": "Dhorpatan",
+    "name_ne": "ढोरपाटन",
+    "type": "Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 581,
+    "name": "Galkot",
+    "name_ne": "गलकोट",
+    "type": "Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 582,
+    "name": "Jaimuni",
+    "name_ne": "जैमुनी",
+    "type": "Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 583,
+    "name": "Kanthekhola",
+    "name_ne": "कान्ठेखोला",
+    "type": "Rural Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 584,
+    "name": "Nisikhola",
+    "name_ne": "निसिखोला",
+    "type": "Rural Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 585,
+    "name": "Taman Khola",
+    "name_ne": "तमन खोला",
+    "type": "Rural Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 586,
+    "name": "Tara Khola",
+    "name_ne": "तारा खोला",
+    "type": "Rural Municipality",
+    "parent": 143,
+    "level": 2
+  },
+  {
+    "id": 587,
+    "name": "Aarughat",
+    "name_ne": "आरुघाट",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 588,
+    "name": "Ajirkot",
+    "name_ne": "अजिरकोट",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 589,
+    "name": "Barpak Sulikot",
+    "name_ne": "बारपाक सुलिकोट",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 590,
+    "name": "Bhimsenthapa",
+    "name_ne": "भीमसेनथापा",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 591,
+    "name": "Chum Nubri",
+    "name_ne": "चुम नुब्रि",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 592,
+    "name": "Dharche",
+    "name_ne": "धार्चे",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 593,
+    "name": "Gandaki",
+    "name_ne": "गण्डकी",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 594,
+    "name": "Gorkha",
+    "name_ne": "गोरखा",
+    "type": "Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 595,
+    "name": "Palungtar",
+    "name_ne": "पालुङटार",
+    "type": "Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 596,
+    "name": "Sahid Lakhan",
+    "name_ne": "सहिद लखन",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 597,
+    "name": "Siranchok",
+    "name_ne": "सिरञ्चोक",
+    "type": "Rural Municipality",
+    "parent": 144,
+    "level": 2
+  },
+  {
+    "id": 598,
+    "name": "Annapurna",
+    "name_ne": "अन्नपूर्ण",
+    "type": "Rural Municipality",
+    "parent": 145,
+    "level": 2
+  },
+  {
+    "id": 599,
+    "name": "Machhapuchchhre",
+    "name_ne": "माछापुच्छ्रे",
+    "type": "Rural Municipality",
+    "parent": 145,
+    "level": 2
+  },
+  {
+    "id": 600,
+    "name": "Madi",
+    "name_ne": "माडी",
+    "type": "Rural Municipality",
+    "parent": 145,
+    "level": 2
+  },
+  {
+    "id": 601,
+    "name": "Pokhara",
+    "name_ne": "पोखरा",
+    "type": "Metropolitan City",
+    "parent": 145,
+    "level": 2
+  },
+  {
+    "id": 602,
+    "name": "Rupa",
+    "name_ne": "रुपा",
+    "type": "Rural Municipality",
+    "parent": 145,
+    "level": 2
+  },
+  {
+    "id": 603,
+    "name": "Besishahar",
+    "name_ne": "बेशिशहर",
+    "type": "Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 604,
+    "name": "Dordi",
+    "name_ne": "दोर्दी",
+    "type": "Rural Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 605,
+    "name": "Dudhpokhari",
+    "name_ne": "दूधपोखरी",
+    "type": "Rural Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 606,
+    "name": "Kwholasothar",
+    "name_ne": "क्वालासोथर",
+    "type": "Rural Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 607,
+    "name": "MadhyaNepal",
+    "name_ne": "मध्यनेपाल",
+    "type": "Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 608,
+    "name": "Marsyangdi",
+    "name_ne": "मर्स्याङ्दी",
+    "type": "Rural Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 609,
+    "name": "Rainas",
+    "name_ne": "रैनास",
+    "type": "Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 610,
+    "name": "Sundarbazar",
+    "name_ne": "सुन्दरबजार",
+    "type": "Municipality",
+    "parent": 146,
+    "level": 2
+  },
+  {
+    "id": 611,
+    "name": "Chame",
+    "name_ne": "चामे",
+    "type": "Rural Municipality",
+    "parent": 147,
+    "level": 2
+  },
+  {
+    "id": 612,
+    "name": "Manang Ingshyang",
+    "name_ne": "मनाङ इङ्स्याङ",
+    "type": "Rural Municipality",
+    "parent": 147,
+    "level": 2
+  },
+  {
+    "id": 613,
+    "name": "Narpa Bhumi",
+    "name_ne": "नरपा भूमि",
+    "type": "Rural Municipality",
+    "parent": 147,
+    "level": 2
+  },
+  {
+    "id": 614,
+    "name": "Narshon",
+    "name_ne": "नरशोन",
+    "type": "Rural Municipality",
+    "parent": 147,
+    "level": 2
+  },
+  {
+    "id": 615,
+    "name": "Gharapjhong",
+    "name_ne": "घरापझोङ",
+    "type": "Rural Municipality",
+    "parent": 148,
+    "level": 2
+  },
+  {
+    "id": 616,
+    "name": "Lo-Ghekar Damodarkunda",
+    "name_ne": "लो घेकर दामोदरकुण्ड",
+    "type": "Rural Municipality",
+    "parent": 148,
+    "level": 2
+  },
+  {
+    "id": 617,
+    "name": "Lomanthang",
+    "name_ne": "लोमान्थाङ",
+    "type": "Rural Municipality",
+    "parent": 148,
+    "level": 2
+  },
+  {
+    "id": 618,
+    "name": "Thasang",
+    "name_ne": "थासाङ",
+    "type": "Rural Municipality",
+    "parent": 148,
+    "level": 2
+  },
+  {
+    "id": 619,
+    "name": "Waragung Muktikhsetra",
+    "name_ne": "वारागुङ मुक्तिक्षेत्र",
+    "type": "Rural Municipality",
+    "parent": 148,
+    "level": 2
+  },
+  {
+    "id": 620,
+    "name": "Annapurna",
+    "name_ne": "अन्नपूर्ण",
+    "type": "Rural Municipality",
+    "parent": 149,
+    "level": 2
+  },
+  {
+    "id": 621,
+    "name": "Beni",
+    "name_ne": "बेनी",
+    "type": "Municipality",
+    "parent": 149,
+    "level": 2
+  },
+  {
+    "id": 622,
+    "name": "Dhaulagiri",
+    "name_ne": "धौलागिरी",
+    "type": "Rural Municipality",
+    "parent": 149,
+    "level": 2
+  },
+  {
+    "id": 623,
+    "name": "Malika",
+    "name_ne": "मलिका",
+    "type": "Rural Municipality",
+    "parent": 149,
+    "level": 2
+  },
+  {
+    "id": 624,
+    "name": "Mangala",
+    "name_ne": "मंगला",
+    "type": "Rural Municipality",
+    "parent": 149,
+    "level": 2
+  },
+  {
+    "id": 625,
+    "name": "Raghuganga",
+    "name_ne": "रघुगंगा",
+    "type": "Rural Municipality",
+    "parent": 149,
+    "level": 2
+  },
+  {
+    "id": 626,
+    "name": "Baudeekali",
+    "name_ne": "बौदेकाली",
+    "type": "Rural Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 627,
+    "name": "Binayee",
+    "name_ne": "बिनयी",
+    "type": "Rural Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 628,
+    "name": "Bulingtar",
+    "name_ne": "बुलिङटार",
+    "type": "Rural Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 629,
+    "name": "Devchuli",
+    "name_ne": "देवचुली",
+    "type": "Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 630,
+    "name": "Gaidakot",
+    "name_ne": "गैडाकोट",
+    "type": "Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 631,
+    "name": "Hupsekot",
+    "name_ne": "हुप्सेकोट",
+    "type": "Rural Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 632,
+    "name": "Kawasoti",
+    "name_ne": "कावासोती",
+    "type": "Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 633,
+    "name": "Madhyabindu",
+    "name_ne": "मध्यविन्दु",
+    "type": "Municipality",
+    "parent": 150,
+    "level": 2
+  },
+  {
+    "id": 634,
+    "name": "Bihadi",
+    "name_ne": "बिहादी",
+    "type": "Rural Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 635,
+    "name": "Jaljala",
+    "name_ne": "जलजला",
+    "type": "Rural Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 636,
+    "name": "Kushma",
+    "name_ne": "कुश्मा",
+    "type": "Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 637,
+    "name": "Mahashila",
+    "name_ne": "महाशिला",
+    "type": "Rural Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 638,
+    "name": "Modi",
+    "name_ne": "मोदी",
+    "type": "Rural Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 639,
+    "name": "Painyu",
+    "name_ne": "पाइन्यु",
+    "type": "Rural Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 640,
+    "name": "Phalebas",
+    "name_ne": "फलेबास",
+    "type": "Municipality",
+    "parent": 151,
+    "level": 2
+  },
+  {
+    "id": 641,
+    "name": "Aandhikhola",
+    "name_ne": "आँधीखोला",
+    "type": "Rural Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 642,
+    "name": "Arjunchaupari",
+    "name_ne": "अर्जुनचौपरी",
+    "type": "Rural Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 643,
+    "name": "Bhirkot",
+    "name_ne": "भिरकोट",
+    "type": "Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 644,
+    "name": "Biruwa",
+    "name_ne": "बिरुवा",
+    "type": "Rural Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 645,
+    "name": "Chapakot",
+    "name_ne": "चापाकोट",
+    "type": "Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 646,
+    "name": "Galyang",
+    "name_ne": "गल्याङ",
+    "type": "Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 647,
+    "name": "Harinas",
+    "name_ne": "हरिनास",
+    "type": "Rural Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 648,
+    "name": "Kaligandagi",
+    "name_ne": "कालीगण्डगी",
+    "type": "Rural Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 649,
+    "name": "Phedikhola",
+    "name_ne": "फेदीखोला",
+    "type": "Rural Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 650,
+    "name": "Putalibazar",
+    "name_ne": "पुतलीबजार",
+    "type": "Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 651,
+    "name": "Waling",
+    "name_ne": "वालिङ",
+    "type": "Municipality",
+    "parent": 152,
+    "level": 2
+  },
+  {
+    "id": 652,
+    "name": "Anbukhaireni",
+    "name_ne": "अन्बुखैरेनी",
+    "type": "Rural Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 653,
+    "name": "Bandipur",
+    "name_ne": "बन्दीपुर",
+    "type": "Rural Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 654,
+    "name": "Bhanu",
+    "name_ne": "भानु",
+    "type": "Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 655,
+    "name": "Bhimad",
+    "name_ne": "भीमद",
+    "type": "Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 656,
+    "name": "Byas",
+    "name_ne": "ब्यास",
+    "type": "Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 657,
+    "name": "Devghat",
+    "name_ne": "देवघाट",
+    "type": "Rural Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 658,
+    "name": "Ghiring",
+    "name_ne": "घिरिङ",
+    "type": "Rural Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 659,
+    "name": "Myagde",
+    "name_ne": "म्याग्दे",
+    "type": "Rural Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 660,
+    "name": "Rhishing",
+    "name_ne": "रिसिङ",
+    "type": "Rural Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 661,
+    "name": "Shuklagandaki",
+    "name_ne": "शुक्लागण्डकी",
+    "type": "Municipality",
+    "parent": 153,
+    "level": 2
+  },
+  {
+    "id": 662,
+    "name": "Bhumekasthan",
+    "name_ne": "भुमेकस्थान",
+    "type": "Municipality",
+    "parent": 154,
+    "level": 2
+  },
+  {
+    "id": 663,
+    "name": "Chhatradev",
+    "name_ne": "छत्रदेव",
+    "type": "Rural Municipality",
+    "parent": 154,
+    "level": 2
+  },
+  {
+    "id": 664,
+    "name": "Malarani",
+    "name_ne": "मलारानी",
+    "type": "Rural Municipality",
+    "parent": 154,
+    "level": 2
+  },
+  {
+    "id": 665,
+    "name": "Panini",
+    "name_ne": "पाणिनी",
+    "type": "Rural Municipality",
+    "parent": 154,
+    "level": 2
+  },
+  {
+    "id": 666,
+    "name": "Sandhikharka",
+    "name_ne": "सन्धिखर्क",
+    "type": "Municipality",
+    "parent": 154,
+    "level": 2
+  },
+  {
+    "id": 667,
+    "name": "Sitganga",
+    "name_ne": "सितगंगा",
+    "type": "Municipality",
+    "parent": 154,
+    "level": 2
+  },
+  {
+    "id": 668,
+    "name": "Baijanath",
+    "name_ne": "बैजनाथ",
+    "type": "Rural Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 669,
+    "name": "Duduwa",
+    "name_ne": "डुडुवा",
+    "type": "Rural Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 670,
+    "name": "Janki",
+    "name_ne": "जानकी",
+    "type": "Rural Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 671,
+    "name": "Khajura",
+    "name_ne": "खजुरा",
+    "type": "Rural Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 672,
+    "name": "Kohalpur",
+    "name_ne": "कोहलपुर",
+    "type": "Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 673,
+    "name": "Narainapur",
+    "name_ne": "नरैनापुर",
+    "type": "Rural Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 674,
+    "name": "Nepalgunj",
+    "name_ne": "नेपालगन्ज",
+    "type": "Sub-Metropolitan City",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 675,
+    "name": "Rapti Sonari",
+    "name_ne": "राप्ती सोनारी",
+    "type": "Rural Municipality",
+    "parent": 155,
+    "level": 2
+  },
+  {
+    "id": 676,
+    "name": "Badhaiyatal",
+    "name_ne": "बढैयाताल",
+    "type": "Rural Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 677,
+    "name": "Bansagadhi",
+    "name_ne": "बाँसगढी",
+    "type": "Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 678,
+    "name": "Barbardiya",
+    "name_ne": "बारबर्दिया",
+    "type": "Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 679,
+    "name": "Geruwa",
+    "name_ne": "गेरुवा",
+    "type": "Rural Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 680,
+    "name": "Gulariya",
+    "name_ne": "गुलरिया",
+    "type": "Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 681,
+    "name": "Madhuwan",
+    "name_ne": "मधुवन",
+    "type": "Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 682,
+    "name": "Rajapur",
+    "name_ne": "राजापुर",
+    "type": "Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 683,
+    "name": "Thakurbaba",
+    "name_ne": "ठाकुरबाबा",
+    "type": "Municipality",
+    "parent": 156,
+    "level": 2
+  },
+  {
+    "id": 684,
+    "name": "Babai",
+    "name_ne": "बबई",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 685,
+    "name": "Banglachuli",
+    "name_ne": "बंगलाचुली",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 686,
+    "name": "Dangisharan",
+    "name_ne": "दंगिशरण",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 687,
+    "name": "Gadhawa",
+    "name_ne": "गढवा",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 688,
+    "name": "Ghorahi",
+    "name_ne": "घोराही",
+    "type": "Sub-Metropolitan City",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 689,
+    "name": "Lamahi",
+    "name_ne": "लमही",
+    "type": "Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 690,
+    "name": "Rajpur",
+    "name_ne": "राजपुर",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 691,
+    "name": "Rapti",
+    "name_ne": "राप्ती",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 692,
+    "name": "Shantinagar",
+    "name_ne": "शान्तिनगर",
+    "type": "Rural Municipality",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 693,
+    "name": "Tulsipur",
+    "name_ne": "तुलसीपुर",
+    "type": "Sub-Metropolitan City",
+    "parent": 157,
+    "level": 2
+  },
+  {
+    "id": 694,
+    "name": "Chandrakot",
+    "name_ne": "चन्द्रकोट",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 695,
+    "name": "Chatrakot",
+    "name_ne": "चत्रकोट",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 696,
+    "name": "Chatrakot",
+    "name_ne": "चत्रकोट",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 697,
+    "name": "Gulmidarbar",
+    "name_ne": "गुल्मीदरबार",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 698,
+    "name": "Isma",
+    "name_ne": "इस्मा",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 699,
+    "name": "Kaligandaki",
+    "name_ne": "कालीगण्डकी",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 700,
+    "name": "Madane",
+    "name_ne": "मदने",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 701,
+    "name": "Malika",
+    "name_ne": "मलिका",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 702,
+    "name": "Musikot",
+    "name_ne": "मुसिकोट",
+    "type": "Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 703,
+    "name": "Resunga",
+    "name_ne": "रेसुंगा",
+    "type": "Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 704,
+    "name": "Ruru",
+    "name_ne": "रुरु",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 705,
+    "name": "Satyawati",
+    "name_ne": "सत्यवती",
+    "type": "Rural Municipality",
+    "parent": 158,
+    "level": 2
+  },
+  {
+    "id": 706,
+    "name": "Banganga",
+    "name_ne": "बाणगंगा",
+    "type": "Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 707,
+    "name": "Bijayanagar",
+    "name_ne": "विजयनगर",
+    "type": "Rural Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 708,
+    "name": "Buddhabhumi",
+    "name_ne": "बुद्धभूमि",
+    "type": "Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 709,
+    "name": "Kapilbastu",
+    "name_ne": "कपिलवस्तु",
+    "type": "Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 710,
+    "name": "Krishnanagar",
+    "name_ne": "कृष्णनगर",
+    "type": "Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 711,
+    "name": "Maharajgunj",
+    "name_ne": "महाराजगन्ज",
+    "type": "Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 712,
+    "name": "Mayadevi",
+    "name_ne": "मायादेवी",
+    "type": "Rural Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 713,
+    "name": "Shivaraj",
+    "name_ne": "शिवराज",
+    "type": "Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 714,
+    "name": "Suddhodhan",
+    "name_ne": "शुद्धोधन",
+    "type": "Rural Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 715,
+    "name": "Yashodhara",
+    "name_ne": "यशोधरा",
+    "type": "Rural Municipality",
+    "parent": 159,
+    "level": 2
+  },
+  {
+    "id": 716,
+    "name": "Bagnaskali",
+    "name_ne": "बागनास्कली",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 717,
+    "name": "Mathagadhi",
+    "name_ne": "मठगढी",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 718,
+    "name": "Nisdi",
+    "name_ne": "निस्दी",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 719,
+    "name": "Purbakhola",
+    "name_ne": "पूर्वखोला",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 720,
+    "name": "Rainadevi",
+    "name_ne": "रैनादेवी",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 721,
+    "name": "Rambha",
+    "name_ne": "रम्भा",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 722,
+    "name": "Rampur",
+    "name_ne": "रामपुर",
+    "type": "Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 723,
+    "name": "Ribdikot",
+    "name_ne": "रिब्दीकोट",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 724,
+    "name": "Tansen",
+    "name_ne": "तानसेन",
+    "type": "Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 725,
+    "name": "Tinau",
+    "name_ne": "तिनाउ",
+    "type": "Rural Municipality",
+    "parent": 160,
+    "level": 2
+  },
+  {
+    "id": 726,
+    "name": "Bardaghat",
+    "name_ne": "बर्दघाट",
+    "type": "Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 727,
+    "name": "Palhi Nandan",
+    "name_ne": "पाल्ही नन्दन",
+    "type": "Rural Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 728,
+    "name": "Pratappur",
+    "name_ne": "प्रतापपुर",
+    "type": "Rural Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 729,
+    "name": "Ramgram",
+    "name_ne": "रामग्राम",
+    "type": "Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 730,
+    "name": "Sarawal",
+    "name_ne": "सरवल",
+    "type": "Rural Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 731,
+    "name": "Sunwal",
+    "name_ne": "सुनवल",
+    "type": "Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 732,
+    "name": "Susta",
+    "name_ne": "सुस्ता",
+    "type": "Rural Municipality",
+    "parent": 161,
+    "level": 2
+  },
+  {
+    "id": 733,
+    "name": "Ayirabat",
+    "name_ne": "आइराबत",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 734,
+    "name": "Gaumukhi",
+    "name_ne": "गौमुखी",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 735,
+    "name": "Jhimruk",
+    "name_ne": "झिमरुक",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 736,
+    "name": "Mallarani",
+    "name_ne": "मल्लरानी",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 737,
+    "name": "Mandavi",
+    "name_ne": "मांडवी",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 738,
+    "name": "Naubahini",
+    "name_ne": "नौबहिनी",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 739,
+    "name": "Pyuthan",
+    "name_ne": "प्युठान",
+    "type": "Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 740,
+    "name": "Sarumarani",
+    "name_ne": "सरूमरानी",
+    "type": "Rural Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 741,
+    "name": "Sworgadwary",
+    "name_ne": "स्वर्गद्वारी",
+    "type": "Municipality",
+    "parent": 162,
+    "level": 2
+  },
+  {
+    "id": 742,
+    "name": "Gangadev",
+    "name_ne": "गंगादेव",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 743,
+    "name": "Lungri",
+    "name_ne": "लुङ्गरी",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 744,
+    "name": "Madi",
+    "name_ne": "माडी",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 745,
+    "name": "Pariwartan",
+    "name_ne": "परिवर्तन",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 746,
+    "name": "Rolpa",
+    "name_ne": "रोल्पा",
+    "type": "Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 747,
+    "name": "Runtigadi",
+    "name_ne": "रुन्टीगढी",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 748,
+    "name": "Sunchhahari",
+    "name_ne": "सुनछहरी",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 749,
+    "name": "Sunil Smriti",
+    "name_ne": "सुनिल स्मृति",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 750,
+    "name": "Thawang",
+    "name_ne": "थवाङ",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 751,
+    "name": "Tribeni",
+    "name_ne": "त्रिवेणी",
+    "type": "Rural Municipality",
+    "parent": 163,
+    "level": 2
+  },
+  {
+    "id": 752,
+    "name": "Bhume",
+    "name_ne": "भुमे",
+    "type": "Rural Municipality",
+    "parent": 164,
+    "level": 2
+  },
+  {
+    "id": 753,
+    "name": "Putha Uttarganga",
+    "name_ne": "पुथा उत्तरगंगा",
+    "type": "Rural Municipality",
+    "parent": 164,
+    "level": 2
+  },
+  {
+    "id": 754,
+    "name": "Sisne",
+    "name_ne": "सिस्ने",
+    "type": "Rural Municipality",
+    "parent": 164,
+    "level": 2
+  },
+  {
+    "id": 755,
+    "name": "Butwal",
+    "name_ne": "बुटवल",
+    "type": "Sub-Metropolitan City",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 756,
+    "name": "Devdaha",
+    "name_ne": "देवदह",
+    "type": "Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 757,
+    "name": "Gaidahawa",
+    "name_ne": "गैडहवा",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 758,
+    "name": "Kanchan",
+    "name_ne": "कञ्चन",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 759,
+    "name": "Kotahimai",
+    "name_ne": "कोटाहिमाई",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 760,
+    "name": "Lumbini Sanskritik",
+    "name_ne": "लुम्बिनी संस्कृत",
+    "type": "Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 761,
+    "name": "Marchawari",
+    "name_ne": "मार्चवारी",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 762,
+    "name": "Mayadevi",
+    "name_ne": "मायादेवी",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 763,
+    "name": "Omsatiya",
+    "name_ne": "ओमसतिया",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 764,
+    "name": "Rohini",
+    "name_ne": "रोहिणी",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 765,
+    "name": "Sainamaina",
+    "name_ne": "सैनामैना",
+    "type": "Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 766,
+    "name": "Sammarimai",
+    "name_ne": "समरीमाई",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 767,
+    "name": "Siddharthanagar",
+    "name_ne": "सिद्धार्थनगर",
+    "type": "Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 768,
+    "name": "Siyari",
+    "name_ne": "सियारी",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 769,
+    "name": "Sudhdhodhan",
+    "name_ne": "शुद्धोधन",
+    "type": "Rural Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 770,
+    "name": "Tillotama",
+    "name_ne": "तिलोतमा",
+    "type": "Municipality",
+    "parent": 165,
+    "level": 2
+  },
+  {
+    "id": 771,
+    "name": "Aathabis",
+    "name_ne": "आठबिस",
+    "type": "Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 772,
+    "name": "Bhagawatimai",
+    "name_ne": "भगवतीमाई",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 773,
+    "name": "Bhairabi",
+    "name_ne": "भैरवी",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 774,
+    "name": "Chamunda Bindrasaini",
+    "name_ne": "चामुण्डा बिन्द्रसैनी",
+    "type": "Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 775,
+    "name": "Dullu",
+    "name_ne": "दुल्लु",
+    "type": "Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 776,
+    "name": "Dungeshwor",
+    "name_ne": "डुङ्गेश्वर",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 777,
+    "name": "Gurans",
+    "name_ne": "गुराँस",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 778,
+    "name": "Mahabu",
+    "name_ne": "महाबु",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 779,
+    "name": "Narayan",
+    "name_ne": "नारायण",
+    "type": "Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 780,
+    "name": "Naumule",
+    "name_ne": "नौमुले",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 781,
+    "name": "Thantikandh",
+    "name_ne": "ठान्टिकाण्ड",
+    "type": "Rural Municipality",
+    "parent": 166,
+    "level": 2
+  },
+  {
+    "id": 782,
+    "name": "Chharka Tangsong",
+    "name_ne": "छर्का ताङसोङ",
+    "type": "Rural Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 783,
+    "name": "Dolpo Buddha",
+    "name_ne": "डोल्पो बुद्ध",
+    "type": "Rural Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 784,
+    "name": "Jagadulla",
+    "name_ne": "जगदुल्ला",
+    "type": "Rural Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 785,
+    "name": "Kaike",
+    "name_ne": "काइके",
+    "type": "Rural Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 786,
+    "name": "Mudkechula",
+    "name_ne": "मुड्केचुला",
+    "type": "Rural Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 787,
+    "name": "Shey Phoksundo",
+    "name_ne": "शे फोक्सुण्डो",
+    "type": "Rural Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 788,
+    "name": "Thuli Bheri",
+    "name_ne": "ठुली भेरी",
+    "type": "Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 789,
+    "name": "Tripurasundari",
+    "name_ne": "त्रिपुरासुन्दरी",
+    "type": "Municipality",
+    "parent": 167,
+    "level": 2
+  },
+  {
+    "id": 790,
+    "name": "Adanchuli",
+    "name_ne": "अडांचुली",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 791,
+    "name": "Chankheli",
+    "name_ne": "चनखेली",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 792,
+    "name": "Kharpunath",
+    "name_ne": "खार्पुनाथ",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 793,
+    "name": "Namkha",
+    "name_ne": "नम्खा",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 794,
+    "name": "Sarkegad",
+    "name_ne": "सार्केगड",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 795,
+    "name": "Simkot",
+    "name_ne": "सिमकोट",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 796,
+    "name": "Tanjakot",
+    "name_ne": "तान्जाकोट",
+    "type": "Rural Municipality",
+    "parent": 168,
+    "level": 2
+  },
+  {
+    "id": 797,
+    "name": "Barekot",
+    "name_ne": "बारेकोट",
+    "type": "Rural Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 798,
+    "name": "Bheri",
+    "name_ne": "भेरी",
+    "type": "Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 799,
+    "name": "Chhedagad",
+    "name_ne": "छेडागढ",
+    "type": "Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 800,
+    "name": "Junichande",
+    "name_ne": "जुनिचन्दे",
+    "type": "Rural Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 801,
+    "name": "Kuse",
+    "name_ne": "कुसे",
+    "type": "Rural Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 802,
+    "name": "Nalagad",
+    "name_ne": "नालागड",
+    "type": "Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 803,
+    "name": "Shiwalaya",
+    "name_ne": "शिवालय",
+    "type": "Rural Municipality",
+    "parent": 169,
+    "level": 2
+  },
+  {
+    "id": 804,
+    "name": "Chandannath",
+    "name_ne": "चन्दननाथ",
+    "type": "Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 805,
+    "name": "Guthichaur",
+    "name_ne": "गुठीचौर",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 806,
+    "name": "Hima",
+    "name_ne": "हिमा",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 807,
+    "name": "Kanakasundari",
+    "name_ne": "कनकसुन्दरी",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 808,
+    "name": "Patrasi",
+    "name_ne": "पत्रासी",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 809,
+    "name": "Sinja",
+    "name_ne": "सिन्जा",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 810,
+    "name": "Tatopani",
+    "name_ne": "तातोपानी",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 811,
+    "name": "Tila",
+    "name_ne": "तिला",
+    "type": "Rural Municipality",
+    "parent": 170,
+    "level": 2
+  },
+  {
+    "id": 812,
+    "name": "Khandachakra",
+    "name_ne": "खंडचक्र",
+    "type": "Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 813,
+    "name": "Mahawai",
+    "name_ne": "महावाई",
+    "type": "Rural Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 814,
+    "name": "Naraharinath",
+    "name_ne": "नरहरिनाथ",
+    "type": "Rural Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 815,
+    "name": "Pachaljharana",
+    "name_ne": "पाँचलझरना",
+    "type": "Rural Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 816,
+    "name": "Palata",
+    "name_ne": "पलाता",
+    "type": "Rural Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 817,
+    "name": "Raskot",
+    "name_ne": "रास्कोट",
+    "type": "Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 818,
+    "name": "Sanni Tribeni",
+    "name_ne": "सन्नी त्रिवेणी",
+    "type": "Rural Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 819,
+    "name": "Subha Kalika",
+    "name_ne": "शुभ कालिका",
+    "type": "Rural Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 820,
+    "name": "Tilagufa",
+    "name_ne": "तिलागुफा",
+    "type": "Municipality",
+    "parent": 171,
+    "level": 2
+  },
+  {
+    "id": 821,
+    "name": "Chhayanath Rara",
+    "name_ne": "छायानाथ रारा",
+    "type": "Municipality",
+    "parent": 172,
+    "level": 2
+  },
+  {
+    "id": 822,
+    "name": "Khatyad",
+    "name_ne": "खत्याड",
+    "type": "Rural Municipality",
+    "parent": 172,
+    "level": 2
+  },
+  {
+    "id": 823,
+    "name": "Mugum Karmarong",
+    "name_ne": "मुगुम कर्मारोङ",
+    "type": "Rural Municipality",
+    "parent": 172,
+    "level": 2
+  },
+  {
+    "id": 824,
+    "name": "Soru",
+    "name_ne": "सोरु",
+    "type": "Rural Municipality",
+    "parent": 172,
+    "level": 2
+  },
+  {
+    "id": 825,
+    "name": "Aathbiskot",
+    "name_ne": "आठबिस्कोट",
+    "type": "Municipality",
+    "parent": 173,
+    "level": 2
+  },
+  {
+    "id": 826,
+    "name": "Banfikot",
+    "name_ne": "बनफिकोट",
+    "type": "Rural Municipality",
+    "parent": 173,
+    "level": 2
+  },
+  {
+    "id": 827,
+    "name": "Chaurjahari",
+    "name_ne": "चौरजहारी",
+    "type": "Municipality",
+    "parent": 173,
+    "level": 2
+  },
+  {
+    "id": 828,
+    "name": "Musikot",
+    "name_ne": "मुसिकोट",
+    "type": "Municipality",
+    "parent": 173,
+    "level": 2
+  },
+  {
+    "id": 829,
+    "name": "Sani Bheri",
+    "name_ne": "सानी भेरी",
+    "type": "Rural Municipality",
+    "parent": 173,
+    "level": 2
+  },
+  {
+    "id": 830,
+    "name": "Tribeni",
+    "name_ne": "त्रिवेणी",
+    "type": "Rural Municipality",
+    "parent": 173,
+    "level": 2
+  },
+  {
+    "id": 831,
+    "name": "Bagchaur",
+    "name_ne": "बागचौर",
+    "type": "Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 832,
+    "name": "Bangad",
+    "name_ne": "बांगड",
+    "type": "Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 833,
+    "name": "Chhatreshwori",
+    "name_ne": "छत्रेश्वरी",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 834,
+    "name": "Darma",
+    "name_ne": "डार्मा",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 835,
+    "name": "Kalimati",
+    "name_ne": "कालीमाटी",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 836,
+    "name": "Kapurkot",
+    "name_ne": "कपुरकोट",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 837,
+    "name": "Kumakh",
+    "name_ne": "कुमाख",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 838,
+    "name": "Sharada",
+    "name_ne": "शारदा",
+    "type": "Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 839,
+    "name": "Siddha Kumakh",
+    "name_ne": "सिद्ध कुमाख",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 840,
+    "name": "Tribeni",
+    "name_ne": "त्रिवेणी",
+    "type": "Rural Municipality",
+    "parent": 174,
+    "level": 2
+  },
+  {
+    "id": 841,
+    "name": "Barahtal",
+    "name_ne": "बराहताल",
+    "type": "Rural Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 842,
+    "name": "Bheriganga",
+    "name_ne": "भेरीगंगा",
+    "type": "Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 843,
+    "name": "Birendranagar",
+    "name_ne": "वीरेन्द्रनगर",
+    "type": "Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 844,
+    "name": "Chaukune",
+    "name_ne": "चौकुने",
+    "type": "Rural Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 845,
+    "name": "Chingad",
+    "name_ne": "चिंगाड",
+    "type": "Rural Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 846,
+    "name": "Gurbhakot",
+    "name_ne": "गुर्भाकोट",
+    "type": "Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 847,
+    "name": "Lekbeshi",
+    "name_ne": "लेकबेशी",
+    "type": "Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 848,
+    "name": "Panchpuri",
+    "name_ne": "पञ्चपुरी",
+    "type": "Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 849,
+    "name": "Simta",
+    "name_ne": "सिम्ता",
+    "type": "Rural Municipality",
+    "parent": 175,
+    "level": 2
+  },
+  {
+    "id": 850,
+    "name": "Bannigadhi",
+    "name_ne": "बान्नीगढी",
+    "type": "Rural Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 851,
+    "name": "Chaurpati",
+    "name_ne": "चौरपाटी",
+    "type": "Rural Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 852,
+    "name": "Dhakari",
+    "name_ne": "ढकारी",
+    "type": "Rural Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 853,
+    "name": "Kamalbazar",
+    "name_ne": "कमलबजार",
+    "type": "Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 854,
+    "name": "Mangalsen",
+    "name_ne": "मंगलसेन",
+    "type": "Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 855,
+    "name": "Mellekh",
+    "name_ne": "मेल्लेख",
+    "type": "Rural Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 856,
+    "name": "Panchadewal Binayak",
+    "name_ne": "पञ्चदेवल विनायक",
+    "type": "Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 857,
+    "name": "Ramaroshan",
+    "name_ne": "रामरोशन",
+    "type": "Rural Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 858,
+    "name": "Sanphebagar",
+    "name_ne": "साँफेबगर",
+    "type": "Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 859,
+    "name": "Turmakhad",
+    "name_ne": "तुर्मखाड",
+    "type": "Rural Municipality",
+    "parent": 176,
+    "level": 2
+  },
+  {
+    "id": 860,
+    "name": "Dasharathchanda",
+    "name_ne": "दशरथचन्द",
+    "type": "Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 861,
+    "name": "Dilasaini",
+    "name_ne": "डिलासैनी",
+    "type": "Rural Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 862,
+    "name": "Dogadakedar",
+    "name_ne": "दोगडाकेदार",
+    "type": "Rural Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 863,
+    "name": "Melauli",
+    "name_ne": "मेलौली",
+    "type": "Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 864,
+    "name": "Pancheshwar",
+    "name_ne": "पञ्चेश्वर",
+    "type": "Rural Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 865,
+    "name": "Patan",
+    "name_ne": "पाटन",
+    "type": "Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 866,
+    "name": "Purchaudi",
+    "name_ne": "पुर्चौडी",
+    "type": "Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 867,
+    "name": "Shivanath",
+    "name_ne": "शिवनाथ",
+    "type": "Rural Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 868,
+    "name": "Sigas",
+    "name_ne": "सिगास",
+    "type": "Rural Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 869,
+    "name": "Surnaya",
+    "name_ne": "सुर्नाया",
+    "type": "Rural Municipality",
+    "parent": 177,
+    "level": 2
+  },
+  {
+    "id": 870,
+    "name": "Bithadchir",
+    "name_ne": "बिठाडचिर",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 871,
+    "name": "Bungal",
+    "name_ne": "बुंगल",
+    "type": "Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 872,
+    "name": "Chabispathivera",
+    "name_ne": "चाबिस्पाथीवेरा",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 873,
+    "name": "Durgathali",
+    "name_ne": "दुर्गाथली",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 874,
+    "name": "JayaPrithivi",
+    "name_ne": "जय पृथ्वी",
+    "type": "Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 875,
+    "name": "Kedarseu",
+    "name_ne": "केदारसेउ",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 876,
+    "name": "Khaptadchhanna",
+    "name_ne": "खप्तडछन्ना",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 877,
+    "name": "Masta",
+    "name_ne": "मस्त",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 878,
+    "name": "SaiPaal",
+    "name_ne": "साइपाल",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 879,
+    "name": "Surma",
+    "name_ne": "सुर्मा",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 880,
+    "name": "Talkot",
+    "name_ne": "तालकोट",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 881,
+    "name": "Thalara",
+    "name_ne": "थालारा",
+    "type": "Rural Municipality",
+    "parent": 178,
+    "level": 2
+  },
+  {
+    "id": 882,
+    "name": "Badimalika",
+    "name_ne": "बडिमालिका",
+    "type": "Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 883,
+    "name": "Budhiganga",
+    "name_ne": "बुढीगंगा",
+    "type": "Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 884,
+    "name": "Budhinanda",
+    "name_ne": "बुढीनन्द",
+    "type": "Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 885,
+    "name": "Gaumul",
+    "name_ne": "गौमुल",
+    "type": "Rural Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 886,
+    "name": "Himali",
+    "name_ne": "हिमाली",
+    "type": "Rural Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 887,
+    "name": "Jagannath",
+    "name_ne": "जगन्नाथ",
+    "type": "Rural Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 888,
+    "name": "Khaptad Chhededaha",
+    "name_ne": "खप्तड छेडेदह",
+    "type": "Rural Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 889,
+    "name": "Swami Kartik Khaapar",
+    "name_ne": "स्वामी कार्तिक खापर",
+    "type": "Rural Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 890,
+    "name": "Tribeni",
+    "name_ne": "त्रिवेणी",
+    "type": "Municipality",
+    "parent": 179,
+    "level": 2
+  },
+  {
+    "id": 891,
+    "name": "Ajaymeru",
+    "name_ne": "अजयमेरु",
+    "type": "Rural Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 892,
+    "name": "Alital",
+    "name_ne": "अलिताल",
+    "type": "Rural Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 893,
+    "name": "Amargadhi",
+    "name_ne": "अमरगढी",
+    "type": "Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 894,
+    "name": "Bhageshwar",
+    "name_ne": "भागेश्वर",
+    "type": "Rural Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 895,
+    "name": "Ganayapdhura",
+    "name_ne": "गणयपधुरा",
+    "type": "Rural Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 896,
+    "name": "Nawadurga",
+    "name_ne": "नवदुर्गा",
+    "type": "Rural Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 897,
+    "name": "Parashuram",
+    "name_ne": "परशुराम",
+    "type": "Municipality",
+    "parent": 180,
+    "level": 2
+  },
+  {
+    "id": 898,
+    "name": "Apihimal",
+    "name_ne": "एपिहिमल",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 899,
+    "name": "Byas",
+    "name_ne": "ब्यास",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 900,
+    "name": "Dunhu",
+    "name_ne": "दुन्हु",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 901,
+    "name": "Lekam",
+    "name_ne": "लेकम",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 902,
+    "name": "Mahakali",
+    "name_ne": "महाकाली",
+    "type": "Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 903,
+    "name": "Malikaarjun",
+    "name_ne": "मालिकार्जुन",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 904,
+    "name": "Marma",
+    "name_ne": "मर्मा",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 905,
+    "name": "Naugad",
+    "name_ne": "नौगाड",
+    "type": "Rural Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 906,
+    "name": "Shailyashikhar",
+    "name_ne": "शैल्यशिखर",
+    "type": "Municipality",
+    "parent": 181,
+    "level": 2
+  },
+  {
+    "id": 907,
+    "name": "Adharsha",
+    "name_ne": "आदर्श",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 908,
+    "name": "Badikedar",
+    "name_ne": "बडीकेदार",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 909,
+    "name": "Bogtan Foodsil",
+    "name_ne": "Bogtan Foodsil",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 910,
+    "name": "Dipayal Silgadi",
+    "name_ne": "दिपायल सिलगढी",
+    "type": "Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 911,
+    "name": "Jorayal",
+    "name_ne": "जोरयाल",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 912,
+    "name": "K I Singh",
+    "name_ne": "के आई सिंह",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 913,
+    "name": "Purbichauki",
+    "name_ne": "पूर्वचौकी",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 914,
+    "name": "Sayal",
+    "name_ne": "सायल",
+    "type": "Rural Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 915,
+    "name": "Shikhar",
+    "name_ne": "शिखर",
+    "type": "Municipality",
+    "parent": 182,
+    "level": 2
+  },
+  {
+    "id": 916,
+    "name": "Bardagoriya",
+    "name_ne": "बर्दगोरिया",
+    "type": "Rural Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 917,
+    "name": "Bhajani",
+    "name_ne": "भजनी",
+    "type": "Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 918,
+    "name": "Chure",
+    "name_ne": "चुरे",
+    "type": "Rural Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 919,
+    "name": "Dhangadhi",
+    "name_ne": "धनगढी",
+    "type": "Sub-Metropolitan City",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 920,
+    "name": "Gauriganga",
+    "name_ne": "गौरीगंगा",
+    "type": "Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 921,
+    "name": "Ghodaghodi",
+    "name_ne": "घोडाघोडी",
+    "type": "Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 922,
+    "name": "Godawari",
+    "name_ne": "गोदावरी",
+    "type": "Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 923,
+    "name": "Janaki",
+    "name_ne": "जानकी",
+    "type": "Rural Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 924,
+    "name": "Joshipur",
+    "name_ne": "जोशीपुर",
+    "type": "Rural Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 925,
+    "name": "Kailari",
+    "name_ne": "कैलारी",
+    "type": "Rural Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 926,
+    "name": "Lamkichuha",
+    "name_ne": "लम्कीचुहा",
+    "type": "Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 927,
+    "name": "Mohanyal",
+    "name_ne": "मोहन्याल",
+    "type": "Rural Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 928,
+    "name": "Tikapur",
+    "name_ne": "टीकापुर",
+    "type": "Municipality",
+    "parent": 183,
+    "level": 2
+  },
+  {
+    "id": 929,
+    "name": "Bedkot",
+    "name_ne": "बेदकोट",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 930,
+    "name": "Belauri",
+    "name_ne": "बेलौरी",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 931,
+    "name": "Beldandi",
+    "name_ne": "बेलडाँडी",
+    "type": "Rural Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 932,
+    "name": "Bhimdatta",
+    "name_ne": "भीमदत्त",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 933,
+    "name": "Krishnapur",
+    "name_ne": "कृष्णपुर",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 934,
+    "name": "Laljhandi",
+    "name_ne": "लालझण्डी",
+    "type": "Rural Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 935,
+    "name": "Mahakali",
+    "name_ne": "महाकाली",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 936,
+    "name": "Punarbas",
+    "name_ne": "पुनर्वास",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  },
+  {
+    "id": 937,
+    "name": "Shuklaphanta",
+    "name_ne": "शुक्लाफाँटा",
+    "type": "Municipality",
+    "parent": 184,
+    "level": 2
+  }
+]

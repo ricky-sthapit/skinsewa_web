@@ -24,6 +24,7 @@ return new class extends Migration
                 $table->boolean('is_admin')->default(false);
                 $table->rememberToken();
                 $table->timestamps();
+                $table->softDeletes();
             });
         }
 
@@ -127,6 +128,7 @@ return new class extends Migration
             Schema::create('places', function (Blueprint $table): void {
                 $table->increments('id');
                 $table->string('name', 100);
+                $table->string('name_ne', 100)->nullable();
                 $table->enum('type', ['Province', 'District', 'Metropolitan City', 'Municipality', 'Rural Municipality', 'Sub-Metropolitan City']);
                 $table->integer('parent')->default(0);
                 $table->integer('level');

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2fafc">
     <title>@yield('title', 'SkinSewa')</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/skinsewa-logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>

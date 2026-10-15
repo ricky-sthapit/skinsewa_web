@@ -4,7 +4,13 @@ This project is being rebuilt in small, verifiable slices. The current slice imp
 
 ## Database
 
-The app uses MySQL. Set `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` in `.env`; the local development environment is configured for the `skinsewa` database. The checked-in migrations create the legacy-compatible tables and add the SkinSewa workflow fields. The original sample SQL is kept separately at `/Users/ricky/Downloads/rickycom_dcrn.sql`; importing those sample records is a separate step.
+The app uses MySQL. Set `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` in `.env`; the local development environment is configured for the `skinsewa` database. The checked-in migrations create the legacy-compatible tables and add the SkinSewa workflow fields. The locations seeder imports the supplied Nepal location JSON: 7 provinces, 77 districts, and 753 local levels. It stores English names in `name`, Nepali names in `name_ne`, and uses each local level’s `type_en` value for the `places.type` enum. Existing place IDs from the SQL dump are preserved.
+
+Run the locations seeder after migrating, or seed the existing database with `php artisan db:seed`:
+
+```sh
+php artisan migrate --seed
+```
 
 ## User levels
 

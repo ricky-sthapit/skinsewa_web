@@ -1,25 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.workspace')
 
 @section('title', 'Dashboard · SkinSewa')
 
-@section('content')
+@section('workspace-content')
 @php($user = auth()->user())
-<main class="page-shell dashboard-shell">
-    <header class="topbar">
-        <a class="brand" href="{{ route('home') }}" aria-label="SkinSewa home">
-            <img src="{{ asset('images/skinsewa-logo.png') }}" alt="">
-            <span>SkinSewa</span>
-        </a>
-        <form method="post" action="{{ route('logout') }}">
-            @csrf
-            <button class="quiet-button" type="submit">Sign out</button>
-        </form>
-    </header>
-
-    <section class="welcome-panel">
-        <p class="eyebrow">YOUR SKIN. OUR CARE.</p>
-        <h1>Welcome, {{ $user->first_name }}</h1>
-        <p class="muted">You’re signed in to the SkinSewa care workspace.</p>
+<div class="dashboard-shell">
+    <section class="welcome-panel dashboard-welcome">
+        <div>
+            <p class="eyebrow">YOUR SKIN. OUR CARE.</p>
+            <h1>Welcome, {{ $user->first_name }}</h1>
+            <p class="muted">You’re signed in to the SkinSewa care workspace.</p>
+        </div>
+        @if ($user->isAdministrator())
+            <a class="primary-button dashboard-action" href="{{ route('users.index') }}">Manage users <span aria-hidden="true">→</span></a>
+        @endif
     </section>
 
     <section class="profile-card" aria-labelledby="profile-title">
@@ -38,5 +32,5 @@
             <div><dt>Account level</dt><dd>{{ $user->role() }}</dd></div>
         </dl>
     </section>
-</main>
+</div>
 @endsection

@@ -13,7 +13,11 @@ class EnsureRole
     {
         $user = $request->user();
         if (! $user instanceof User || ! in_array($user->role(), $roles, true)) {
-            return response()->json(['message' => 'You are not authorized to perform this action.'], 403);
+            if ($request->expectsJson()) {
+                return response()->json(['message' => 'You are not authorized to perform this action.'], 403);
+            }
+
+            abort(403);
         }
 
         return $next($request);
