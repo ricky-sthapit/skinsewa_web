@@ -1,0 +1,118 @@
+erDiagram
+    USERS {
+        int id PK
+        string email
+        string user_type
+        boolean is_admin
+        string phone
+        string facility_name
+        string specialty
+    }
+
+    PATIENTS {
+        int id PK
+        string name
+        string gender
+        int age
+        string phc
+        string province
+        string district
+        string municipality
+        int created_by FK
+        date date_of_birth
+        timestamp consent_recorded_at
+    }
+
+    CASES {
+        int id PK
+        int patient_id FK
+        int created_by FK
+        int assigned_to FK
+        text finding
+        text history
+        text symptoms
+        string status
+        string priority
+        timestamp closed_at
+    }
+
+    IMAGES {
+        int id PK
+        int case_id FK
+        int user_id FK
+        string filename
+        string storage_path
+        int sort_order
+        string caption
+        string sha256
+    }
+
+    TREATMENTS {
+        int id PK
+        int case_id FK
+        int treatment_by FK
+        string diagnosis
+        string prevention
+        string treatment
+        string referral
+        timestamp follow_up_at
+        string status
+    }
+
+    QUERIES {
+        int id PK
+        int case_id FK
+        int user_id FK
+        text detail
+        timestamp read_at
+    }
+
+    REGISTRATION {
+        int id PK
+        string email
+        string code
+        string role
+        int invited_by FK
+        timestamp otp_expires_at
+        int otp_attempts
+        boolean is_registered
+    }
+
+    PDF_RESOURCES {
+        int id PK
+        string title
+        string file
+        int user_id FK
+        string storage_path
+        boolean is_published
+    }
+
+    TOPICS {
+        int id PK
+        string title
+        text description
+        int user_id FK
+    }
+
+    PLACES {
+        int id PK
+        string name
+        string type
+        int parent
+        int level
+    }
+
+    USERS ||--o{ PATIENTS : creates
+    USERS ||--o{ CASES : creates
+    USERS ||--o{ CASES : assigned_doctor
+    PATIENTS ||--o{ CASES : has
+    CASES ||--o{ IMAGES : contains
+    USERS ||--o{ IMAGES : uploads
+    CASES ||--o{ TREATMENTS : receives
+    USERS ||--o{ TREATMENTS : prescribes
+    CASES ||--o{ QUERIES : chat_messages
+    USERS ||--o{ QUERIES : sends
+    USERS o|--o{ REGISTRATION : invites
+    USERS ||--o{ PDF_RESOURCES : uploads
+    USERS ||--o{ TOPICS : creates
+    PLACES o|--o{ PLACES : parent_of
