@@ -16,6 +16,9 @@
         <a class="sidebar-link {{ request()->routeIs('home') ? 'is-active' : '' }}" href="{{ route('home') }}" title="Dashboard">
             <span class="sidebar-icon" aria-hidden="true">⌂</span><span class="sidebar-link-label">Dashboard</span>
         </a>
+        <a class="sidebar-link {{ request()->routeIs('resources.*') ? 'is-active' : '' }}" href="{{ route('resources.index') }}" title="Resources">
+            <span class="sidebar-icon" aria-hidden="true">▤</span><span class="sidebar-link-label">Resources</span>
+        </a>
         @if (auth()->user()->isAdministrator())
             <a class="sidebar-link {{ request()->routeIs('users.*') ? 'is-active' : '' }}" href="{{ route('users.index') }}" title="Users">
                 <span class="sidebar-icon" aria-hidden="true">♙</span><span class="sidebar-link-label">Users</span>

@@ -2,9 +2,17 @@
 
 @section('content')
 <div class="workspace-layout">
+    @include('partials.rail')
     @include('partials.sidebar')
     <main class="workspace-main">
         <header class="workspace-topbar">
+            @if (auth()->user()->isAdministrator())
+                <form class="global-search" method="get" action="{{ route('users.index') }}" role="search">
+                    <label class="sr-only" for="workspace-search">Search users</label>
+                    <img src="{{ asset('images/search.svg') }}" alt="" aria-hidden="true">
+                    <input id="workspace-search" type="search" name="q" value="{{ request()->routeIs('users.*') ? request('q') : '' }}" placeholder="Search users">
+                </form>
+            @endif
             <details class="account-menu">
                 <summary class="account-trigger" aria-label="Open account menu">
                     <span class="sidebar-avatar" aria-hidden="true">{{ mb_strtoupper(mb_substr(auth()->user()->first_name, 0, 1).mb_substr(auth()->user()->last_name, 0, 1)) }}</span>
@@ -37,7 +45,7 @@
         const sidebar = document.querySelector('.workspace-sidebar');
         const navigationToggle = document.querySelector('.mobile-nav-toggle');
         const workspace = document.querySelector('.workspace-layout');
-        const collapseToggle = document.querySelector('.sidebar-collapse-toggle');
+        const collapseToggles = document.querySelectorAll('.sidebar-collapse-toggle');
         const accountMenu = document.querySelector('.account-menu');
         const desktopSidebar = window.matchMedia('(min-width: 901px)');
         let savedCollapsed = false;
@@ -48,9 +56,11 @@
         const setDesktopCollapsed = (collapsed, persist = false) => {
             const isCollapsed = desktopSidebar.matches && collapsed;
             workspace?.classList.toggle('is-sidebar-collapsed', isCollapsed);
-            collapseToggle?.setAttribute('aria-pressed', String(isCollapsed));
-            collapseToggle?.setAttribute('aria-label', isCollapsed ? 'Expand sidebar' : 'Collapse sidebar');
-            if (collapseToggle) collapseToggle.title = isCollapsed ? 'Expand sidebar' : 'Collapse sidebar';
+            collapseToggles.forEach((toggle) => {
+                toggle.setAttribute('aria-pressed', String(isCollapsed));
+                toggle.setAttribute('aria-label', isCollapsed ? 'Expand sidebar' : 'Collapse sidebar');
+                toggle.title = isCollapsed ? 'Expand sidebar' : 'Collapse sidebar';
+            });
             if (persist) {
                 savedCollapsed = collapsed;
                 try {
@@ -60,9 +70,9 @@
         };
 
         setDesktopCollapsed(savedCollapsed);
-        collapseToggle?.addEventListener('click', () => {
+        collapseToggles.forEach((toggle) => toggle.addEventListener('click', () => {
             setDesktopCollapsed(!workspace?.classList.contains('is-sidebar-collapsed'), true);
-        });
+        }));
         window.addEventListener('resize', () => setDesktopCollapsed(savedCollapsed));
 
         const closeNavigation = () => {
