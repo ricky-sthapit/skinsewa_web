@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Notifications\RegistrationOtpNotification;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
@@ -49,7 +50,12 @@ class RegistrationService
         });
 
         // Deliver only after the hashed one-time code has been committed.
-        $invitation->notify(new RegistrationOtpNotification($otp, $ttl));
+        $registrationUrl = URL::temporarySignedRoute(
+            'registration.show',
+            $invitation->otp_expires_at,
+            ['registration' => $invitation->getKey()],
+        );
+        $invitation->notify(new RegistrationOtpNotification($otp, $ttl, $registrationUrl));
 
         return $invitation;
     }

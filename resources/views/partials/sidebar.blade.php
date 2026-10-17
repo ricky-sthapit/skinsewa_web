@@ -19,9 +19,17 @@
         <a class="sidebar-link {{ request()->routeIs('resources.*') ? 'is-active' : '' }}" href="{{ route('resources.index') }}" title="Resources">
             <span class="sidebar-icon" aria-hidden="true">▤</span><span class="sidebar-link-label">Resources</span>
         </a>
+        @if (auth()->user()->isAdministrator() || in_array(auth()->user()->role(), [\App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST], true))
+            <a class="sidebar-link {{ request()->routeIs('cases.*') ? 'is-active' : '' }}" href="{{ route('cases.index') }}" title="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}">
+                <span class="sidebar-icon" aria-hidden="true">✚</span><span class="sidebar-link-label">{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}</span>
+            </a>
+        @endif
         @if (auth()->user()->isAdministrator())
             <a class="sidebar-link {{ request()->routeIs('users.*') ? 'is-active' : '' }}" href="{{ route('users.index') }}" title="Users">
                 <span class="sidebar-icon" aria-hidden="true">♙</span><span class="sidebar-link-label">Users</span>
+            </a>
+            <a class="sidebar-link {{ request()->routeIs('invitations.*') ? 'is-active' : '' }}" href="{{ route('invitations.index') }}" title="Invitations">
+                <span class="sidebar-icon" aria-hidden="true">✉</span><span class="sidebar-link-label">Invitations</span>
             </a>
         @endif
     </nav>

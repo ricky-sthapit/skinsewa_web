@@ -10,6 +10,7 @@
         <h1 id="login-title">Welcome back</h1>
         <p class="muted">Sign in to continue to your SkinSewa workspace.</p>
 
+        @if (session('status')) <div class="success-alert" role="status">{{ session('status') }}</div> @endif
         @if ($errors->any())
             <div class="alert" role="alert">{{ $errors->first() }}</div>
         @endif
@@ -21,6 +22,7 @@
 
             <label for="password">Password</label>
             <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <a class="forgot-password-link" href="{{ route('password.request') }}">Forgot password?</a>
 
             <label class="remember-row" for="remember">
                 <input id="remember" name="remember" type="checkbox" value="1">

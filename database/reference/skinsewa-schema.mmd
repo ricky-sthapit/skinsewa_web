@@ -11,6 +11,7 @@ erDiagram
 
     PATIENTS {
         int id PK
+        string patient_code UK
         string name
         string gender
         int age
@@ -39,6 +40,7 @@ erDiagram
     IMAGES {
         int id PK
         int case_id FK
+        int query_id FK
         int user_id FK
         string filename
         string storage_path
@@ -107,6 +109,7 @@ erDiagram
     USERS ||--o{ CASES : assigned_doctor
     PATIENTS ||--o{ CASES : has
     CASES ||--o{ IMAGES : contains
+    QUERIES o|--o{ IMAGES : attaches
     USERS ||--o{ IMAGES : uploads
     CASES ||--o{ TREATMENTS : receives
     USERS ||--o{ TREATMENTS : prescribes

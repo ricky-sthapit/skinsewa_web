@@ -1,6 +1,6 @@
 # SkinSewa Laravel API
 
-This project is being rebuilt in small, verifiable slices. The current slice implements user levels, administrator-issued registration invitations, OTP registration, bearer-token API login/logout, session-based web login/logout, current-user lookup, password reset, and a minimal user dashboard.
+This project is being rebuilt in small, verifiable slices. It includes role-based accounts, administrator-issued registration invitations, OTP registration, bearer-token API login/logout, password reset, resources, and the Laravel care workspace for patient cases.
 
 ## Database
 
@@ -29,6 +29,8 @@ php artisan admin:create admin@example.org First Last
 ```
 
 The local `.env.example` uses the log mailer, so invitations and reset links are written to `storage/logs/laravel.log`. Configure an approved SMTP or mail provider before sending real email.
+
+Administrators can manage invitations from `/invitations`. Each invitation email contains a time-limited signed registration link and a one-time code. The registration page displays the invited email and user type as read-only values; the server derives both from the invitation record and requires the emailed code before creating the account. An admin can resend a fresh invitation from the invitation history page.
 
 ## Auth API
 
@@ -73,6 +75,20 @@ The invite response never contains the OTP. The registration response and login 
 ## Web homepage
 
 The homepage (`/`) checks the web session: guests see the sign-in form, and signed-in users see the SkinSewa logo with their name, email, level, phone, facility, and specialty. Successful sign-in regenerates the session; sign-out invalidates it. Web sessions and mobile bearer tokens are separate.
+
+## Patient cases, chat, and treatment
+
+`/cases` shows cases created by a health worker, cases assigned to the signed-in dermatologist, or all cases to an administrator. Only the assigned dermatologist can add a diagnosis and course of action. The plan reuses the legacy `treatments` table (`diagnosis`, `prevention`, `treatment`, `referral`, `treatment_by`, and `case_id`); medicine and ointment instructions are recorded in its `treatment` field.
+
+The per-case conversation reuses the legacy `queries` table. Messages refresh in the browser every five seconds. A message can include up to 10 JPG, PNG, or WebP photos, each up to 10 MB. Attachments are stored as private entries in the existing `images` table and appear in both the conversation and the case gallery. The gallery supports fullscreen view, swipe navigation, and zoom controls. Administrators can read every case and conversation; only the case's creating health worker and assigned dermatologist can send messages.
+
+When `CHAT_WEBHOOK_URL` and `CHAT_WEBHOOK_SECRET` are set, each new message sends a signed JSON `case.message.created` event to that URL. The signature is `sha256=` plus HMAC-SHA256 of `<unix timestamp>.<raw JSON body>`, using the configured secret. The request includes `X-SkinSewa-Event`, `X-SkinSewa-Event-Id`, `X-SkinSewa-Timestamp`, and `X-SkinSewa-Signature` headers. The webhook payload includes the case/message IDs, author, text, and attachment count. Delivery errors are logged and do not prevent the message from being saved. Leave both settings empty to keep webhook delivery disabled.
+
+Apply the chat attachment migration with:
+
+```sh
+php artisan migrate
+```
 
 ## Verification
 

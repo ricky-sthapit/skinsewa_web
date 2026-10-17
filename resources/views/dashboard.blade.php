@@ -12,6 +12,10 @@
         </div>
         @if ($user->isAdministrator())
             <a class="primary-button dashboard-action" href="{{ route('users.index') }}">Manage users <span aria-hidden="true">→</span></a>
+        @elseif ($user->role() === \App\Models\User::ROLE_MEDICAL_OFFICER)
+            <a class="primary-button dashboard-action" href="{{ route('cases.create') }}">Add patient case <span aria-hidden="true">→</span></a>
+        @elseif ($user->role() === \App\Models\User::ROLE_DERMATOLOGIST)
+            <a class="primary-button dashboard-action" href="{{ route('cases.index') }}">Review assigned cases <span aria-hidden="true">→</span></a>
         @endif
     </section>
 

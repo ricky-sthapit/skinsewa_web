@@ -38,4 +38,26 @@ class Registration extends Model
             'revoked_at' => 'datetime',
         ];
     }
+
+    public function getUserTypeLabelAttribute(): string
+    {
+        return match ($this->role) {
+            User::ROLE_MEDICAL_OFFICER => 'Health worker',
+            User::ROLE_DERMATOLOGIST => 'Dermatologist',
+            default => 'Unknown',
+        };
+    }
+
+    public function getInvitationStatusAttribute(): string
+    {
+        if ($this->is_registered) {
+            return 'accepted';
+        }
+
+        if ($this->revoked_at) {
+            return 'revoked';
+        }
+
+        return ! $this->otp_expires_at || $this->otp_expires_at->isPast() ? 'expired' : 'pending';
+    }
 }

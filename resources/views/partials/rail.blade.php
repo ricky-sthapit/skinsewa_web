@@ -9,9 +9,17 @@
         <a class="rail-link {{ request()->routeIs('resources.*') ? 'is-active' : '' }}" href="{{ route('resources.index') }}" title="Resources" aria-label="Resources">
             <span aria-hidden="true">▤</span>
         </a>
+        @if (auth()->user()->isAdministrator() || in_array(auth()->user()->role(), [\App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST], true))
+            <a class="rail-link {{ request()->routeIs('cases.*') ? 'is-active' : '' }}" href="{{ route('cases.index') }}" title="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}" aria-label="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}">
+                <span aria-hidden="true">✚</span>
+            </a>
+        @endif
         @if (auth()->user()->isAdministrator())
             <a class="rail-link {{ request()->routeIs('users.*') ? 'is-active' : '' }}" href="{{ route('users.index') }}" title="Users" aria-label="Users">
                 <span aria-hidden="true">♙</span>
+            </a>
+            <a class="rail-link {{ request()->routeIs('invitations.*') ? 'is-active' : '' }}" href="{{ route('invitations.index') }}" title="Invitations" aria-label="Invitations">
+                <span aria-hidden="true">✉</span>
             </a>
         @endif
         <a class="rail-link {{ request()->routeIs('profile.*') ? 'is-active' : '' }}" href="{{ route('profile.show') }}" title="Profile" aria-label="Profile">

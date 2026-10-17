@@ -13,6 +13,7 @@ class RegistrationOtpNotification extends Notification
     public function __construct(
         private readonly string $otp,
         private readonly int $expiresInMinutes,
+        private readonly string $registrationUrl,
     ) {}
 
     public function via(object $notifiable): array
@@ -23,11 +24,13 @@ class RegistrationOtpNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Your SkinSewa registration code')
+            ->subject('Your SkinSewa invitation')
             ->greeting('Hello,')
             ->line('An administrator invited you to join SkinSewa.')
+            ->action('Complete registration', $this->registrationUrl)
+            ->line('On the registration page, confirm your details and enter this one-time code:')
             ->line('Your one-time registration code is: '.$this->otp)
-            ->line('This code expires in '.$this->expiresInMinutes.' minutes and can be used once.')
-            ->line('Enter this code with the same email address that received this invitation.');
+            ->line('The link and code expire in '.$this->expiresInMinutes.' minutes. The code can be used once.')
+            ->line('Your email address and user type are already set by the invitation.');
     }
 }
