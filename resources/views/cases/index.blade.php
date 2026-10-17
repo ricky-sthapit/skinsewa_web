@@ -37,8 +37,17 @@
             <span>Find a case</span>
             <input type="search" name="q" value="{{ $search }}" placeholder="Patient name, patient ID, or case number" autocomplete="off">
         </label>
+        <label>
+            <span>Case status</span>
+            <select name="status">
+                <option value="">All statuses</option>
+                @foreach ($availableStatuses as $availableStatus)
+                    <option value="{{ $availableStatus }}" @selected($status === $availableStatus)>{{ str($availableStatus)->replace('_', ' ')->title() }}</option>
+                @endforeach
+            </select>
+        </label>
         <button class="primary-button filter-button" type="submit">Search</button>
-        @if ($search !== '') <a class="reset-filters" href="{{ route('cases.index') }}">Clear search</a> @endif
+        @if ($search !== '' || $status !== '') <a class="reset-filters" href="{{ route('cases.index') }}">Clear filters</a> @endif
     </form>
     <div class="table-scroll">
         <table class="users-table cases-table">
@@ -49,7 +58,7 @@
                         <td>
                             <a class="case-patient-link" href="{{ route('cases.show', $patientCase) }}">
                                 <strong>{{ $patientCase->patient->name }}</strong>
-                                <span>Patient {{ $patientCase->patient->patient_code ?: '—' }} · Case #{{ $patientCase->id }} · {{ $patientCase->patient->age }} years · {{ $patientCase->patient->gender }}</span>
+                                <span>Patient {{ $patientCase->patient->patient_code ?: '—' }} · Case #{{ $patientCase->id }}{{ $patientCase->follow_up_of ? ' · Follow-up to #'.$patientCase->follow_up_of : '' }} · {{ $patientCase->patient->age }} years · {{ $patientCase->patient->gender }}</span>
                             </a>
                         </td>
                         <td><span class="stacked-detail">{{ $patientCase->patient->municipality }}</span><span class="table-subtext">{{ $patientCase->patient->district }}</span></td>

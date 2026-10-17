@@ -15,6 +15,7 @@
         <div class="panel-heading"><div><h2 id="case-patient-heading">Patient details</h2><p class="muted">Recorded with patient consent.</p></div></div>
         <dl class="case-detail-list">
             <div><dt>Patient ID</dt><dd>{{ $patientCase->patient->patient_code ?: 'Not assigned' }}</dd></div>
+            <div><dt>Visit type</dt><dd>{{ $patientCase->follow_up_of ? 'Follow-up to case #'.$patientCase->follow_up_of : 'New case' }}</dd></div>
             <div><dt>Age and gender</dt><dd>{{ $patientCase->patient->age }} years · {{ $patientCase->patient->gender }}</dd></div>
             <div><dt>Health facility</dt><dd>{{ $patientCase->phc ?: $patientCase->patient->phc }}</dd></div>
             <div><dt>Province</dt><dd>{{ $patientCase->patient->province }}</dd></div>

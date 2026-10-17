@@ -124,16 +124,23 @@ class CaseConversationController extends Controller
             'referral' => ['nullable', 'string', 'max:1000'],
         ]);
 
-        Treatment::query()->create([
-            'diagnosis' => trim($data['diagnosis']),
-            'prevention' => trim((string) ($data['prevention'] ?? '')),
-            'treatment' => trim($data['treatment']),
-            'referral' => trim((string) ($data['referral'] ?? '')),
-            'treatment_by' => $request->user()->id,
-            'case_id' => $patientCase->id,
-        ]);
+        DB::transaction(function () use ($data, $request, $patientCase): void {
+            Treatment::query()->create([
+                'diagnosis' => trim($data['diagnosis']),
+                'prevention' => trim((string) ($data['prevention'] ?? '')),
+                'treatment' => trim($data['treatment']),
+                'referral' => trim((string) ($data['referral'] ?? '')),
+                'treatment_by' => $request->user()->id,
+                'case_id' => $patientCase->id,
+            ]);
 
-        return redirect()->route('cases.show', $patientCase)->with('status', 'Clinical plan saved to the case.');
+            $patientCase->forceFill([
+                'status' => 'completed',
+                'closed_at' => now(),
+            ])->save();
+        });
+
+        return redirect()->route('cases.show', $patientCase)->with('status', 'Clinical plan saved and case marked completed.');
     }
 
     private function ensureReadable(Request $request, PatientCase $patientCase): void

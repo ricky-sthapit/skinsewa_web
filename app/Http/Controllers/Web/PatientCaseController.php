@@ -31,10 +31,23 @@ class PatientCaseController extends Controller
             User::ROLE_DERMATOLOGIST => ['assigned_to', $user->id],
             default => ['created_by', $user->id],
         };
+        $availableStatuses = PatientCase::query()
+            ->when($caseScope, fn (Builder $query) => $query->where($caseScope[0], $caseScope[1]))
+            ->whereNotNull('status')
+            ->distinct()
+            ->orderBy('status')
+            ->pluck('status')
+            ->merge(['awaiting_review', 'completed'])
+            ->filter()
+            ->unique()
+            ->values();
+        $requestedStatus = mb_substr(trim((string) $request->query('status', '')), 0, 32);
+        $status = $availableStatuses->contains($requestedStatus) ? $requestedStatus : '';
         $cases = PatientCase::query()
             ->with(['patient', 'assignedDoctor', 'creator'])
             ->withCount('photos')
             ->when($caseScope, fn (Builder $query) => $query->where($caseScope[0], $caseScope[1]))
+            ->when($status !== '', fn (Builder $query) => $query->where('status', $status))
             ->when($search !== '', function (Builder $query) use ($search): void {
                 $query->where(function (Builder $query) use ($search): void {
                     $query->where('id', ctype_digit($search) ? (int) $search : 0)
@@ -53,7 +66,7 @@ class PatientCaseController extends Controller
         $isDermatologist = $user->role() === User::ROLE_DERMATOLOGIST;
         $isAdmin = $user->role() === User::ROLE_ADMIN;
 
-        return view('cases.index', compact('cases', 'search', 'caseCount', 'awaitingCount', 'isDermatologist', 'isAdmin'));
+        return view('cases.index', compact('cases', 'search', 'status', 'availableStatuses', 'caseCount', 'awaitingCount', 'isDermatologist', 'isAdmin'));
     }
 
     public function create(): View
@@ -113,6 +126,7 @@ class PatientCaseController extends Controller
             'cases' => $cases->map(fn (PatientCase $case): array => [
                 'id' => $case->id,
                 'created_at' => $case->created_at?->format('M j, Y'),
+                'follow_up_of' => $case->follow_up_of,
                 'symptoms' => $case->symptoms,
                 'finding' => $case->finding,
                 'history' => $case->history,
@@ -132,6 +146,7 @@ class PatientCaseController extends Controller
         $patientRequired = Rule::requiredIf(! $isReturningPatient);
         $data = $request->validate([
             'patient_id' => ['nullable', 'integer', 'exists:patients,id'],
+            'follow_up_of' => ['nullable', 'integer', 'exists:cases,id'],
             'patient_name' => [$patientRequired, 'string', 'max:100'],
             'gender' => [$patientRequired, 'in:Male,Female'],
             'age' => [$patientRequired, 'integer', 'min:0', 'max:130'],
@@ -189,6 +204,14 @@ class PatientCaseController extends Controller
                 ->first();
             if (! $returningPatient) $errors['patient_id'] = 'Choose a patient from your case history.';
         }
+        if ($request->filled('follow_up_of')) {
+            $priorCase = PatientCase::query()
+                ->whereKey($data['follow_up_of'])
+                ->where('patient_id', $returningPatient?->id)
+                ->where('created_by', $request->user()->id)
+                ->first();
+            if (! $priorCase) $errors['follow_up_of'] = 'Choose a previous case for this patient.';
+        }
         if ($errors !== []) throw ValidationException::withMessages($errors);
 
         $storedDirectory = null;
@@ -221,6 +244,7 @@ class PatientCaseController extends Controller
                     'history' => trim($data['history']),
                     'symptoms' => trim($data['symptoms']),
                     'patient_id' => $patient->id,
+                    'follow_up_of' => $data['follow_up_of'] ?? null,
                     'created_by' => $request->user()->id,
                     'assigned_to' => $doctor->id,
                     'status' => 'awaiting_review',
@@ -266,7 +290,7 @@ class PatientCaseController extends Controller
     {
         $this->ensureCaseAccess($request, $patientCase);
         $patientCase->load([
-            'patient', 'assignedDoctor', 'creator', 'photos.message',
+            'patient', 'assignedDoctor', 'creator', 'followUpOf', 'photos.message',
             'messages.author', 'messages.photos', 'treatments.doctor',
         ]);
         $historyScope = match ($request->user()->role()) {

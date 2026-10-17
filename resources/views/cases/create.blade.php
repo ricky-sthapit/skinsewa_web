@@ -23,6 +23,12 @@
             <input type="hidden" name="patient_id" id="selected-patient-id" value="{{ old('patient_id') }}">
             <input type="hidden" name="patient_code" id="selected-patient-code" value="{{ old('patient_code') }}">
             @error('patient_id')<small class="field-error">{{ $message }}</small>@enderror
+            <div id="follow-up-selection" class="follow-up-selection" hidden>
+                <div><h3>Previous cases</h3><p>Each visit will create a new case number. Link this visit to an earlier case if this is a follow-up.</p></div>
+                <label class="case-field"><span>Link as follow-up <small>(optional)</small></span><select name="follow_up_of" id="follow-up-case"><option value="">New case or unrelated concern</option></select></label>
+                @error('follow_up_of')<small class="field-error">{{ $message }}</small>@enderror
+                <div id="confirmed-patient-history" class="confirmed-patient-history"></div>
+            </div>
         </div>
         <div id="new-patient-fields">
         @if ($provinces->isEmpty())
@@ -83,6 +89,10 @@
     const patientIdInput = document.getElementById('selected-patient-id');
     const patientCodeInput = document.getElementById('selected-patient-code');
     const newPatientFields = document.getElementById('new-patient-fields');
+    const followUpSelection = document.getElementById('follow-up-selection');
+    const followUpCase = document.getElementById('follow-up-case');
+    const confirmedPatientHistory = document.getElementById('confirmed-patient-history');
+    const oldFollowUpId = @json(old('follow_up_of'));
     newPatientFields.querySelectorAll('input,select,textarea').forEach((field) => { field.dataset.wasDisabled = field.disabled ? 'true' : 'false'; });
     const renderHistory = (cases) => {
         const history = document.createElement('div');
@@ -93,12 +103,9 @@
             const article = document.createElement('article');
             const title = document.createElement('strong'); title.textContent = `Case #${visit.id} · ${visit.created_at || ''}`; article.append(title);
             const doctor = document.createElement('p'); doctor.textContent = `Dermatologist: ${visit.doctor || 'Not assigned'}`; article.append(doctor);
-            [['Symptoms', visit.symptoms], ['Findings', visit.finding], ['History', visit.history]].forEach(([label, value]) => {
+            [['Diagnosis and treatment', (visit.treatments || []).map((treatment) => `${treatment.diagnosis}: ${treatment.treatment}`).join(' · ')], ['Symptoms', visit.symptoms], ['Findings', visit.finding], ['History', visit.history]].forEach(([label, value]) => {
                 if (!value) return;
                 const line = document.createElement('p'); line.textContent = `${label}: ${value}`; article.append(line);
-            });
-            (visit.treatments || []).forEach((treatment) => {
-                const plan = document.createElement('p'); plan.textContent = `Plan (${treatment.created_at || ''}): ${treatment.diagnosis} — ${treatment.treatment}`; article.append(plan);
             });
             history.append(article);
         });
@@ -121,6 +128,14 @@
             choose.addEventListener('click', () => {
                 patientIdInput.value = payload.patient.id; patientCodeInput.value = payload.patient.patient_code;
                 newPatientFields.hidden = true; newPatientFields.querySelectorAll('input,select,textarea').forEach((field) => { field.disabled = true; });
+                followUpSelection.hidden = false;
+                followUpCase.replaceChildren(new Option('New case or unrelated concern', ''));
+                payload.cases.forEach((visit) => {
+                    const latestPlan = (visit.treatments || []).map((treatment) => treatment.diagnosis).filter(Boolean).join(', ');
+                    const label = `Case #${visit.id} · ${visit.created_at || 'date unavailable'}${latestPlan ? ` · ${latestPlan}` : ''}`;
+                    followUpCase.add(new Option(label, visit.id, false, String(visit.id) === String(oldFollowUpId)));
+                });
+                confirmedPatientHistory.replaceChildren(renderHistory(payload.cases));
                 choose.textContent = 'Patient selected'; choose.disabled = true;
                 let clear = result.querySelector('[data-clear-patient]');
                 if (!clear) { clear = document.createElement('button'); clear.type = 'button'; clear.className = 'secondary-button small-button'; clear.dataset.clearPatient = 'true'; clear.textContent = 'Choose a different patient'; result.append(clear); }
@@ -135,7 +150,8 @@
     codeInput.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); findPatient(); } });
     result.addEventListener('click', (event) => {
         if (!event.target.closest('[data-clear-patient]')) return;
-        patientIdInput.value = ''; patientCodeInput.value = ''; newPatientFields.hidden = false;
+        patientIdInput.value = ''; patientCodeInput.value = ''; newPatientFields.hidden = false; followUpSelection.hidden = true;
+        followUpCase.value = ''; confirmedPatientHistory.replaceChildren();
         newPatientFields.querySelectorAll('input,select,textarea').forEach((field) => { field.disabled = field.dataset.wasDisabled === 'true'; });
         event.target.remove(); result.replaceChildren();
     });

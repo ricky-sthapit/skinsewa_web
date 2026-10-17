@@ -12,7 +12,7 @@ class PatientCase extends Model
 
     protected $fillable = [
         'phc', 'finding', 'history', 'symptoms', 'patient_id', 'created_by',
-        'assigned_to', 'status', 'priority', 'consent_confirmed_at',
+        'follow_up_of', 'assigned_to', 'status', 'priority', 'consent_confirmed_at',
     ];
 
     protected function casts(): array
@@ -36,6 +36,16 @@ class PatientCase extends Model
     public function assignedDoctor(): BelongsTo
     {
         return $this->belongsTo(User::class, 'assigned_to');
+    }
+
+    public function followUpOf(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'follow_up_of');
+    }
+
+    public function followUps(): HasMany
+    {
+        return $this->hasMany(self::class, 'follow_up_of');
     }
 
     public function photos(): HasMany
