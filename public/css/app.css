@@ -92,11 +92,7 @@ h1 { margin-bottom: 8px; font-size: clamp(1.9rem, 5vw, 2.4rem); letter-spacing: 
 .sidebar-account-copy strong { color: #174d78; font-size: .8rem; }
 .sidebar-account-copy span { color: #7890a0; font-size: .7rem; }
 .workspace-main { grid-column: 2; min-width: 0; }
-.workspace-topbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 74px; padding: 12px clamp(20px, 4vw, 48px); border-bottom: 1px solid #e3eef0; background: #fff; }
-.global-search { display: flex; align-items: center; gap: 9px; width: clamp(180px, 26vw, 300px); height: 42px; padding: 0 12px; border: 1px solid #e0ebef; border-radius: 12px; background: #fff; }
-.global-search img { flex: 0 0 18px; width: 18px; height: 18px; }
-.global-search input { width: 100%; min-width: 0; border: 0; outline: 0; color: #174d78; background: transparent; font-size: .82rem; }
-.global-search input::placeholder { color: #91a4b0; }
+.workspace-topbar { display: flex; align-items: center; justify-content: flex-end; gap: 18px; min-height: 74px; padding: 12px clamp(20px, 4vw, 48px); border-bottom: 1px solid #e3eef0; background: #fff; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .topbar-user { display: grid; gap: 2px; text-align: right; }
 .topbar-user-name { overflow: hidden; color: #174d78; font-size: .84rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
@@ -270,7 +266,6 @@ h1 { margin-bottom: 8px; font-size: clamp(1.9rem, 5vw, 2.4rem); letter-spacing: 
 @media (max-width: 560px) {
     .workspace-content { padding-top: 26px; }
     .workspace-topbar { gap: 10px; padding-right: 14px; padding-left: 14px; }
-    .global-search { flex: 1 1 120px; width: auto; min-width: 110px; }
     .account-trigger { max-width: 100%; gap: 8px; padding: 4px; }
     .account-trigger .topbar-user { max-width: min(28vw, 130px); }
     .account-trigger .topbar-role { display: none; }

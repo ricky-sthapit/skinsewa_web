@@ -6,13 +6,6 @@
     @include('partials.sidebar')
     <main class="workspace-main">
         <header class="workspace-topbar">
-            @if (auth()->user()->isAdministrator())
-                <form class="global-search" method="get" action="{{ route('users.index') }}" role="search">
-                    <label class="sr-only" for="workspace-search">Search users</label>
-                    <img src="{{ asset('images/search.svg') }}" alt="" aria-hidden="true">
-                    <input id="workspace-search" type="search" name="q" value="{{ request()->routeIs('users.*') ? request('q') : '' }}" placeholder="Search users">
-                </form>
-            @endif
             <details class="account-menu">
                 <summary class="account-trigger" aria-label="Open account menu">
                     <span class="sidebar-avatar" aria-hidden="true">{{ mb_strtoupper(mb_substr(auth()->user()->first_name, 0, 1).mb_substr(auth()->user()->last_name, 0, 1)) }}</span>
@@ -47,6 +40,7 @@
         const workspace = document.querySelector('.workspace-layout');
         const collapseToggles = document.querySelectorAll('.sidebar-collapse-toggle');
         const accountMenu = document.querySelector('.account-menu');
+        const accountTrigger = accountMenu?.querySelector('.account-trigger');
         const desktopSidebar = window.matchMedia('(min-width: 901px)');
         let savedCollapsed = false;
         try {
@@ -74,6 +68,12 @@
             setDesktopCollapsed(!workspace?.classList.contains('is-sidebar-collapsed'), true);
         }));
         window.addEventListener('resize', () => setDesktopCollapsed(savedCollapsed));
+
+        const syncAccountMenuLabel = () => {
+            accountTrigger?.setAttribute('aria-label', accountMenu.open ? 'Close account menu' : 'Open account menu');
+        };
+        accountMenu?.addEventListener('toggle', syncAccountMenuLabel);
+        syncAccountMenuLabel();
 
         const closeNavigation = () => {
             sidebar?.classList.remove('is-open');
