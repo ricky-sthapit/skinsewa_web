@@ -26,8 +26,7 @@ class PatientCaseController extends Controller
     {
         $search = mb_substr(trim((string) $request->query('q', '')), 0, 100);
         $user = $request->user();
-        $caseScope = match ($user->role()) {
-            User::ROLE_ADMIN => null,
+        $caseScope = $user->isAdministrator() ? null : match ($user->clinicalRole()) {
             User::ROLE_DERMATOLOGIST => ['assigned_to', $user->id],
             default => ['created_by', $user->id],
         };
@@ -63,8 +62,8 @@ class PatientCaseController extends Controller
         $caseCountQuery = PatientCase::query()->when($caseScope, fn (Builder $query) => $query->where($caseScope[0], $caseScope[1]));
         $caseCount = (clone $caseCountQuery)->count();
         $awaitingCount = (clone $caseCountQuery)->where('status', 'awaiting_review')->count();
-        $isDermatologist = $user->role() === User::ROLE_DERMATOLOGIST;
-        $isAdmin = $user->role() === User::ROLE_ADMIN;
+        $isDermatologist = $user->clinicalRole() === User::ROLE_DERMATOLOGIST;
+        $isAdmin = $user->isAdministrator();
 
         return view('cases.index', compact('cases', 'search', 'status', 'availableStatuses', 'caseCount', 'awaitingCount', 'isDermatologist', 'isAdmin'));
     }
@@ -74,7 +73,6 @@ class PatientCaseController extends Controller
         $provinces = Place::query()->where('type', 'Province')->orderBy('name')->get(['id', 'name', 'name_ne']);
         $dermatologists = User::query()
             ->where('user_type', User::ROLE_DERMATOLOGIST)
-            ->where('is_admin', false)
             ->orderBy('first_name')
             ->orderBy('last_name')
             ->get(['id', 'first_name', 'last_name', 'specialty', 'facility_name']);
@@ -190,7 +188,6 @@ class PatientCaseController extends Controller
         $doctor = User::query()
             ->whereKey($data['assigned_to'])
             ->where('user_type', User::ROLE_DERMATOLOGIST)
-            ->where('is_admin', false)
             ->first();
         if (! $doctor) {
             $errors['assigned_to'] = 'Choose an active dermatologist.';
@@ -293,8 +290,7 @@ class PatientCaseController extends Controller
             'patient', 'assignedDoctor', 'creator', 'followUpOf', 'photos.message',
             'messages.author', 'messages.photos', 'treatments.doctor',
         ]);
-        $historyScope = match ($request->user()->role()) {
-            User::ROLE_ADMIN => null,
+        $historyScope = $request->user()->isAdministrator() ? null : match ($request->user()->clinicalRole()) {
             User::ROLE_DERMATOLOGIST => ['assigned_to', $request->user()->id],
             default => ['created_by', $request->user()->id],
         };
@@ -304,9 +300,9 @@ class PatientCaseController extends Controller
             ->with(['assignedDoctor', 'treatments.doctor'])
             ->latest('created_at')
             ->get();
-        $isAdmin = $request->user()->role() === User::ROLE_ADMIN;
-        $canCommunicate = ! $isAdmin && in_array($request->user()->role(), [User::ROLE_MEDICAL_OFFICER, User::ROLE_DERMATOLOGIST], true);
-        $canPrescribe = $request->user()->role() === User::ROLE_DERMATOLOGIST
+        $isAdmin = $request->user()->isAdministrator();
+        $canCommunicate = $this->isClinicalParticipant($request->user(), $patientCase);
+        $canPrescribe = $request->user()->clinicalRole() === User::ROLE_DERMATOLOGIST
             && (int) $patientCase->assigned_to === (int) $request->user()->id;
 
         return view('cases.show', compact('patientCase', 'previousCases', 'isAdmin', 'canCommunicate', 'canPrescribe'));
@@ -329,14 +325,22 @@ class PatientCaseController extends Controller
     private function ensureCaseAccess(Request $request, PatientCase $patientCase): void
     {
         $user = $request->user();
-        $authorized = match ($user->role()) {
-            User::ROLE_ADMIN => true,
+        $authorized = $user->isAdministrator() || match ($user->clinicalRole()) {
             User::ROLE_DERMATOLOGIST => (int) $patientCase->assigned_to === (int) $user->id,
             User::ROLE_MEDICAL_OFFICER => (int) $patientCase->created_by === (int) $user->id,
             default => false,
         };
 
         abort_unless($authorized, 404);
+    }
+
+    private function isClinicalParticipant(User $user, PatientCase $patientCase): bool
+    {
+        return match ($user->clinicalRole()) {
+            User::ROLE_DERMATOLOGIST => (int) $patientCase->assigned_to === (int) $user->id,
+            User::ROLE_MEDICAL_OFFICER => (int) $patientCase->created_by === (int) $user->id,
+            default => false,
+        };
     }
 
     private function makePatientCode(string $province, string $district, string $municipality, int $patientId): string

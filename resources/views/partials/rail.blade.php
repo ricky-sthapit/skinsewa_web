@@ -9,8 +9,8 @@
         <a class="rail-link {{ request()->routeIs('resources.*') ? 'is-active' : '' }}" href="{{ route('resources.index') }}" title="Resources" aria-label="Resources">
             <span aria-hidden="true">▤</span>
         </a>
-        @if (auth()->user()->isAdministrator() || in_array(auth()->user()->role(), [\App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST], true))
-            <a class="rail-link {{ request()->routeIs('cases.*') ? 'is-active' : '' }}" href="{{ route('cases.index') }}" title="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}" aria-label="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}">
+        @if (auth()->user()->isAdministrator() || in_array(auth()->user()->clinicalRole(), [\App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST], true))
+            <a class="rail-link {{ request()->routeIs('cases.*') ? 'is-active' : '' }}" href="{{ route('cases.index') }}" title="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}" aria-label="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}">
                 <span aria-hidden="true">✚</span>
             </a>
         @endif

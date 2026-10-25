@@ -12,7 +12,10 @@ class EnsureRole
     public function handle(Request $request, Closure $next, string ...$roles): Response
     {
         $user = $request->user();
-        if (! $user instanceof User || ! in_array($user->role(), $roles, true)) {
+        $allowed = $user instanceof User
+            && collect($roles)->contains(fn (string $role): bool => $user->hasRole($role));
+
+        if (! $allowed) {
             if ($request->expectsJson()) {
                 return response()->json(['message' => 'You are not authorized to perform this action.'], 403);
             }

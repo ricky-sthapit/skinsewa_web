@@ -27,7 +27,7 @@ class CaseConversationController extends Controller
         $messages = $patientCase->messages()->with(['author', 'photos'])
             ->where('id', '>', $afterId)->orderBy('id')->limit(100)->get();
 
-        if ($request->user()->role() !== User::ROLE_ADMIN && $messages->isNotEmpty()) {
+        if ($this->isParticipant($request->user(), $patientCase) && $messages->isNotEmpty()) {
             $patientCase->messages()->whereIn('id', $messages->pluck('id'))
                 ->where('user_id', '<>', $request->user()->id)->whereNull('read_at')->update(['read_at' => now()]);
         }
@@ -83,7 +83,7 @@ class CaseConversationController extends Controller
 
     public function prescribe(Request $request, PatientCase $patientCase): JsonResponse
     {
-        abort_unless($request->user()->role() === User::ROLE_DERMATOLOGIST && (int) $patientCase->assigned_to === (int) $request->user()->id, 404);
+        abort_unless($request->user()->clinicalRole() === User::ROLE_DERMATOLOGIST && (int) $patientCase->assigned_to === (int) $request->user()->id, 404);
         $data = $request->validate([
             'diagnosis' => ['required', 'string', 'max:1000'],
             'treatment' => ['required', 'string', 'max:1000'],
@@ -118,8 +118,7 @@ class CaseConversationController extends Controller
     private function ensureReadable(Request $request, PatientCase $case): void
     {
         $user = $request->user();
-        $allowed = match ($user->role()) {
-            User::ROLE_ADMIN => true,
+        $allowed = $user->isAdministrator() || match ($user->clinicalRole()) {
             User::ROLE_DERMATOLOGIST => (int) $case->assigned_to === (int) $user->id,
             User::ROLE_MEDICAL_OFFICER => (int) $case->created_by === (int) $user->id,
             default => false,
@@ -130,14 +129,28 @@ class CaseConversationController extends Controller
     private function ensureParticipant(Request $request, PatientCase $case): void
     {
         $this->ensureReadable($request, $case);
-        abort_unless($request->user()->role() !== User::ROLE_ADMIN, 403);
+        abort_unless($this->isParticipant($request->user(), $case), 403);
+    }
+
+    private function isParticipant(User $user, PatientCase $case): bool
+    {
+        return match ($user->clinicalRole()) {
+            User::ROLE_DERMATOLOGIST => (int) $case->assigned_to === (int) $user->id,
+            User::ROLE_MEDICAL_OFFICER => (int) $case->created_by === (int) $user->id,
+            default => false,
+        };
     }
 
     private function payload(CaseMessage $message, int $currentUserId): array
     {
         return [
             'id' => $message->id, 'detail' => $message->detail,
-            'author' => ['id' => $message->author?->id, 'name' => $message->author?->full_name, 'role' => $message->author?->role()],
+            'author' => [
+                'id' => $message->author?->id, 'name' => $message->author?->full_name,
+                'role' => $message->author?->role(), 'user_type' => $message->author?->user_type,
+                'is_admin' => $message->author?->isAdministrator(), 'roles' => $message->author?->roles(),
+                'role_label' => $message->author?->roleLabel(),
+            ],
             'is_mine' => (int) $message->user_id === $currentUserId, 'created_at' => $message->created_at,
             'photos' => $message->photos->map(fn (CasePhoto $photo) => [
                 'id' => $photo->id, 'filename' => $photo->filename,

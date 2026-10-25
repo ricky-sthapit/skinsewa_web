@@ -30,6 +30,8 @@ class ProfileController extends Controller
         return [
             'id' => $user->id, 'first_name' => $user->first_name, 'last_name' => $user->last_name,
             'name' => $user->full_name, 'email' => $user->email, 'role' => $user->role(),
+            'user_type' => $user->user_type, 'is_admin' => $user->isAdministrator(),
+            'roles' => $user->roles(), 'role_label' => $user->roleLabel(),
             'phone' => $user->phone, 'facility_name' => $user->facility_name, 'specialty' => $user->specialty,
         ];
     }

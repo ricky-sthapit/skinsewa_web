@@ -42,13 +42,21 @@
                 <input name="email" type="email" value="{{ old('email', $user->email) }}" maxlength="100" required>
             </label>
             <label>
-                <span>User type</span>
+                <span>Clinical role</span>
                 <select name="user_type" required>
-                    @foreach (\App\Models\User::ROLES as $role)
-                        <option value="{{ $role }}" @selected(old('user_type', $user->role()) === $role)>{{ str($role)->replace('_', ' ')->title() }}</option>
+                    @foreach ([\App\Models\User::ROLE_ADMIN, \App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST] as $role)
+                        <option value="{{ $role }}" @selected(old('user_type', $user->user_type) === $role)>{{ $role === \App\Models\User::ROLE_ADMIN ? 'Admin only' : str($role)->replace('_', ' ')->title() }}</option>
                     @endforeach
                 </select>
             </label>
+            <div class="full-width-field administrator-access">
+                <input type="hidden" name="is_admin" value="0">
+                <label class="admin-access-toggle">
+                    <input type="checkbox" name="is_admin" value="1" @checked((bool) old('is_admin', $user->isAdministrator()))>
+                    <span>Administrator access</span>
+                </label>
+                <small>Can manage users and system resources. This is independent of the clinical role.</small>
+            </div>
             <label>
                 <span>Phone</span>
                 <input name="phone" type="tel" value="{{ old('phone', $user->phone) }}" maxlength="32">

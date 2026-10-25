@@ -192,6 +192,10 @@ h1 { margin-bottom: 8px; font-size: clamp(1.9rem, 5vw, 2.4rem); letter-spacing: 
 .edit-user-form label { min-width: 0; }
 .edit-user-form label small { color: #8ba0ac; font-size: .73rem; font-weight: 500; }
 .full-width-field { grid-column: 1 / -1; }
+.administrator-access { display: grid; gap: 6px; align-content: start; }
+.edit-user-form label.admin-access-toggle { display: flex; align-items: center; gap: 10px; }
+.edit-user-form .admin-access-toggle input[type="checkbox"] { flex: 0 0 18px; width: 18px; height: 18px; margin: 0; accent-color: #078d91; }
+.administrator-access > small { color: #8ba0ac; font-size: .73rem; line-height: 1.45; }
 .edit-form-actions { display: flex; justify-content: flex-end; gap: 10px; padding-top: 22px; margin-top: 22px; border-top: 1px solid #e9f1f3; }
 .edit-form-actions .primary-button { min-width: 130px; }
 .resource-filters { max-width: 760px; }

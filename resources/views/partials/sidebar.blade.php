@@ -19,9 +19,9 @@
         <a class="sidebar-link {{ request()->routeIs('resources.*') ? 'is-active' : '' }}" href="{{ route('resources.index') }}" title="Resources">
             <span class="sidebar-icon" aria-hidden="true">▤</span><span class="sidebar-link-label">Resources</span>
         </a>
-        @if (auth()->user()->isAdministrator() || in_array(auth()->user()->role(), [\App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST], true))
-            <a class="sidebar-link {{ request()->routeIs('cases.*') ? 'is-active' : '' }}" href="{{ route('cases.index') }}" title="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}">
-                <span class="sidebar-icon" aria-hidden="true">✚</span><span class="sidebar-link-label">{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}</span>
+        @if (auth()->user()->isAdministrator() || in_array(auth()->user()->clinicalRole(), [\App\Models\User::ROLE_MEDICAL_OFFICER, \App\Models\User::ROLE_DERMATOLOGIST], true))
+            <a class="sidebar-link {{ request()->routeIs('cases.*') ? 'is-active' : '' }}" href="{{ route('cases.index') }}" title="{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}">
+                <span class="sidebar-icon" aria-hidden="true">✚</span><span class="sidebar-link-label">{{ auth()->user()->isAdministrator() ? 'All cases' : (auth()->user()->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases') }}</span>
             </a>
         @endif
         @if (auth()->user()->isAdministrator())

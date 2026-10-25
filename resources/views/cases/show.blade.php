@@ -3,7 +3,7 @@
 @section('title', 'Case #'.$patientCase->id.' · SkinSewa')
 
 @section('workspace-content')
-<div class="back-link-row"><a class="back-link" href="{{ route('cases.index') }}">← {{ auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : 'Patient cases' }}</a></div>
+<div class="back-link-row"><a class="back-link" href="{{ route('cases.index') }}">← {{ auth()->user()->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST ? 'Assigned cases' : (auth()->user()->isAdministrator() ? 'All cases' : 'Patient cases') }}</a></div>
 @if (session('status')) <div class="success-alert" role="status">{{ session('status') }}</div> @endif
 <section class="page-heading-row compact-heading">
     <div><p class="eyebrow">CASE #{{ $patientCase->id }}</p><h1>{{ $patientCase->patient->name }}</h1><p class="muted">Created {{ $patientCase->created_at?->format('M j, Y · g:i A') }} · {{ $patientCase->patient->municipality }}, {{ $patientCase->patient->district }}</p></div>
@@ -26,7 +26,7 @@
         </dl>
     </section>
     <section class="panel case-detail-panel" aria-labelledby="case-routing-heading">
-        @if (auth()->user()->role() === \App\Models\User::ROLE_DERMATOLOGIST)
+        @if (auth()->user()->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST)
             <div class="panel-heading"><div><h2 id="case-routing-heading">Referred by health worker</h2><p class="muted">The care team member who submitted this case.</p></div></div>
             <div class="assigned-doctor-card"><span class="listed-avatar" aria-hidden="true">{{ mb_strtoupper(mb_substr($patientCase->creator->first_name, 0, 1).mb_substr($patientCase->creator->last_name, 0, 1)) }}</span><div><strong>{{ $patientCase->creator->full_name }}</strong><span>{{ $patientCase->creator->facility_name ?: $patientCase->phc }}</span></div></div>
         @else
@@ -111,7 +111,7 @@
     <div class="case-chat-messages" id="case-chat-messages" role="log" aria-live="polite" aria-relevant="additions text">
         @forelse ($patientCase->messages as $message)
             <article class="chat-message {{ (int) $message->user_id === (int) auth()->id() ? 'is-mine' : '' }}" data-chat-message-id="{{ $message->id }}">
-                <div class="chat-message-meta"><strong>{{ $message->author?->full_name ?? 'Care team member' }}</strong><span>{{ str($message->author?->role() ?? '')->replace('_', ' ')->title() }}</span><time>{{ $message->created_at?->format('M j · g:i A') }}</time></div>
+                <div class="chat-message-meta"><strong>{{ $message->author?->full_name ?? 'Care team member' }}</strong><span>{{ $message->author?->roleLabel() }}</span><time>{{ $message->created_at?->format('M j · g:i A') }}</time></div>
                 @if (trim($message->detail) !== '')<p>{{ $message->detail }}</p>@endif
                 @if ($message->photos->isNotEmpty())<div class="chat-photo-grid">
                     @foreach ($message->photos as $photo)

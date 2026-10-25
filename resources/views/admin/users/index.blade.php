@@ -60,7 +60,7 @@
             <thead>
                 <tr>
                     <th scope="col">User</th>
-                    <th scope="col">User type</th>
+                    <th scope="col">Access / clinical role</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Facility / specialty</th>
                     <th scope="col">Actions</th>
@@ -78,7 +78,7 @@
                                 </span>
                             </div>
                         </td>
-                        <td><span class="role-badge">{{ str($listedUser->role())->replace('_', ' ')->title() }}</span></td>
+                        <td><span class="role-badge">{{ $listedUser->roleLabel() }}</span></td>
                         <td>{{ $listedUser->phone ?: '—' }}</td>
                         <td>
                             <span class="stacked-detail">{{ $listedUser->facility_name ?: '—' }}</span>

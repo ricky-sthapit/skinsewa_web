@@ -96,8 +96,8 @@ class PatientCaseController extends Controller
                 ])->values(),
                 'previous_cases' => $previousCases->map(fn (PatientCase $case) => $this->caseSummary($case, true))->values(),
                 'permissions' => [
-                    'can_chat' => $request->user()->role() !== User::ROLE_ADMIN,
-                    'can_prescribe' => $request->user()->role() === User::ROLE_DERMATOLOGIST && (int) $patientCase->assigned_to === (int) $request->user()->id,
+                    'can_chat' => $this->isParticipant($request->user(), $patientCase),
+                    'can_prescribe' => $request->user()->clinicalRole() === User::ROLE_DERMATOLOGIST && (int) $patientCase->assigned_to === (int) $request->user()->id,
                 ],
             ],
         ]);
@@ -105,7 +105,7 @@ class PatientCaseController extends Controller
 
     public function lookupPatient(Request $request): JsonResponse
     {
-        abort_unless($request->user()->role() === User::ROLE_MEDICAL_OFFICER, 403);
+        abort_unless($request->user()->clinicalRole() === User::ROLE_MEDICAL_OFFICER, 403);
         $data = $request->validate(['patient_code' => ['required', 'string', 'max:40']]);
         $patient = Patient::query()
             ->where('patient_code', Str::upper(trim($data['patient_code'])))
@@ -128,7 +128,7 @@ class PatientCaseController extends Controller
 
     public function store(Request $request): JsonResponse
     {
-        abort_unless($request->user()->role() === User::ROLE_MEDICAL_OFFICER, 403);
+        abort_unless($request->user()->clinicalRole() === User::ROLE_MEDICAL_OFFICER, 403);
         $returning = $request->filled('patient_id');
         $requiredNewPatient = Rule::requiredIf(! $returning);
         $data = $request->validate([
@@ -170,7 +170,7 @@ class PatientCaseController extends Controller
             if (! $district) $errors['district_id'] = 'Choose a district in the selected province.';
             if (! $municipality) $errors['municipality_id'] = 'Choose a local level in the selected district.';
         }
-        $doctor = User::query()->whereKey($data['assigned_to'])->where('user_type', User::ROLE_DERMATOLOGIST)->where('is_admin', false)->first();
+        $doctor = User::query()->whereKey($data['assigned_to'])->where('user_type', User::ROLE_DERMATOLOGIST)->first();
         if (! $doctor) $errors['assigned_to'] = 'Choose an active dermatologist.';
         if ($request->filled('follow_up_of') && ! PatientCase::query()->whereKey($data['follow_up_of'])
             ->where('patient_id', $patient?->id)->where('created_by', $request->user()->id)->exists()) {
@@ -239,16 +239,28 @@ class PatientCaseController extends Controller
     private function ensureAccess(Request $request, PatientCase $case): void
     {
         $scope = $this->scope($request->user());
-        abort_unless($request->user()->role() === User::ROLE_ADMIN || ($scope && (int) $case->{$scope[0]} === (int) $scope[1]), 404);
+        abort_unless($request->user()->isAdministrator() || ($scope && (int) $case->{$scope[0]} === (int) $scope[1]), 404);
     }
 
     private function scope(User $user): ?array
     {
-        return match ($user->role()) {
-            User::ROLE_ADMIN => null,
+        if ($user->isAdministrator()) {
+            return null;
+        }
+
+        return match ($user->clinicalRole()) {
             User::ROLE_DERMATOLOGIST => ['assigned_to', $user->id],
             User::ROLE_MEDICAL_OFFICER => ['created_by', $user->id],
             default => ['created_by', $user->id],
+        };
+    }
+
+    private function isParticipant(User $user, PatientCase $case): bool
+    {
+        return match ($user->clinicalRole()) {
+            User::ROLE_DERMATOLOGIST => (int) $case->assigned_to === (int) $user->id,
+            User::ROLE_MEDICAL_OFFICER => (int) $case->created_by === (int) $user->id,
+            default => false,
         };
     }
 
@@ -295,7 +307,12 @@ class PatientCaseController extends Controller
 
     private function userSummary(?User $user): ?array
     {
-        return $user ? ['id' => $user->id, 'name' => $user->full_name, 'role' => $user->role(), 'facility_name' => $user->facility_name, 'specialty' => $user->specialty] : null;
+        return $user ? [
+            'id' => $user->id, 'name' => $user->full_name, 'role' => $user->role(),
+            'user_type' => $user->user_type, 'is_admin' => $user->isAdministrator(),
+            'roles' => $user->roles(), 'role_label' => $user->roleLabel(),
+            'facility_name' => $user->facility_name, 'specialty' => $user->specialty,
+        ] : null;
     }
 
     private function photoPayload(PatientCase $case, CasePhoto $photo): array

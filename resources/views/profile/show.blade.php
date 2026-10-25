@@ -22,7 +22,7 @@
             <div class="avatar" aria-hidden="true">{{ mb_strtoupper(mb_substr($user->first_name, 0, 1).mb_substr($user->last_name, 0, 1)) }}</div>
             <div>
                 <h2 id="profile-view-title">{{ $user->full_name }}</h2>
-                <span class="role-badge">{{ str($user->role())->replace('_', ' ')->title() }}</span>
+                <span class="role-badge">{{ $user->roleLabel() }}</span>
             </div>
         </div>
     </div>

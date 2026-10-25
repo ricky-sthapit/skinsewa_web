@@ -67,4 +67,43 @@ class User extends Authenticatable
     {
         return $this->isAdministrator() ? self::ROLE_ADMIN : $this->user_type;
     }
+
+    /** The account's clinical job, independent of administrator access. */
+    public function clinicalRole(): ?string
+    {
+        return in_array($this->user_type, [self::ROLE_MEDICAL_OFFICER, self::ROLE_DERMATOLOGIST], true)
+            ? $this->user_type
+            : null;
+    }
+
+    public function hasRole(string $role): bool
+    {
+        return $role === self::ROLE_ADMIN
+            ? $this->isAdministrator()
+            : $this->clinicalRole() === $role;
+    }
+
+    /** @return list<string> */
+    public function roles(): array
+    {
+        return array_values(array_filter([
+            $this->isAdministrator() ? self::ROLE_ADMIN : null,
+            $this->clinicalRole(),
+        ]));
+    }
+
+    public function roleLabel(): string
+    {
+        $labels = [];
+        if ($this->isAdministrator()) {
+            $labels[] = 'Administrator';
+        }
+        if ($this->clinicalRole() === self::ROLE_MEDICAL_OFFICER) {
+            $labels[] = 'Medical Officer';
+        } elseif ($this->clinicalRole() === self::ROLE_DERMATOLOGIST) {
+            $labels[] = 'Dermatologist';
+        }
+
+        return implode(' · ', $labels) ?: 'Care team';
+    }
 }

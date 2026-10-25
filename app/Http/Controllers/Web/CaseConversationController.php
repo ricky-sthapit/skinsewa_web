@@ -31,7 +31,7 @@ class CaseConversationController extends Controller
             ->limit(100)
             ->get();
 
-        if ($messages->isNotEmpty() && $request->user()->role() !== User::ROLE_ADMIN) {
+        if ($messages->isNotEmpty() && $this->isClinicalParticipant($request->user(), $patientCase)) {
             $patientCase->messages()
                 ->whereIn('id', $messages->pluck('id'))
                 ->where('user_id', '!=', $request->user()->id)
@@ -112,7 +112,7 @@ class CaseConversationController extends Controller
     public function prescribe(Request $request, PatientCase $patientCase): RedirectResponse
     {
         abort_unless(
-            $request->user()->role() === User::ROLE_DERMATOLOGIST
+            $request->user()->clinicalRole() === User::ROLE_DERMATOLOGIST
                 && (int) $patientCase->assigned_to === (int) $request->user()->id,
             404
         );
@@ -146,8 +146,7 @@ class CaseConversationController extends Controller
     private function ensureReadable(Request $request, PatientCase $patientCase): void
     {
         $user = $request->user();
-        $authorized = match ($user->role()) {
-            User::ROLE_ADMIN => true,
+        $authorized = $user->isAdministrator() || match ($user->clinicalRole()) {
             User::ROLE_DERMATOLOGIST => (int) $patientCase->assigned_to === (int) $user->id,
             User::ROLE_MEDICAL_OFFICER => (int) $patientCase->created_by === (int) $user->id,
             default => false,
@@ -159,7 +158,16 @@ class CaseConversationController extends Controller
     private function ensureParticipant(Request $request, PatientCase $patientCase): void
     {
         $this->ensureReadable($request, $patientCase);
-        abort_unless($request->user()->role() !== User::ROLE_ADMIN, 403);
+        abort_unless($this->isClinicalParticipant($request->user(), $patientCase), 403);
+    }
+
+    private function isClinicalParticipant(User $user, PatientCase $patientCase): bool
+    {
+        return match ($user->clinicalRole()) {
+            User::ROLE_DERMATOLOGIST => (int) $patientCase->assigned_to === (int) $user->id,
+            User::ROLE_MEDICAL_OFFICER => (int) $patientCase->created_by === (int) $user->id,
+            default => false,
+        };
     }
 
     private function formatMessage(CaseMessage $message, int $currentUserId): array
@@ -169,6 +177,7 @@ class CaseConversationController extends Controller
             'detail' => $message->detail,
             'author' => $message->author?->full_name ?? 'Care team member',
             'role' => $message->author?->role(),
+            'role_label' => $message->author?->roleLabel(),
             'is_mine' => (int) $message->user_id === $currentUserId,
             'created_at' => $message->created_at?->format('M j, Y · g:i A'),
             'photos' => $message->photos->map(fn (CasePhoto $photo) => [

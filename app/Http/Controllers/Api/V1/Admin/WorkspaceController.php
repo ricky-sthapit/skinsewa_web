@@ -22,8 +22,8 @@ class WorkspaceController extends Controller
     {
         return response()->json(['data' => [
             'users' => User::query()->count(),
-            'medical_officers' => User::query()->where('user_type', User::ROLE_MEDICAL_OFFICER)->where('is_admin', false)->count(),
-            'dermatologists' => User::query()->where('user_type', User::ROLE_DERMATOLOGIST)->where('is_admin', false)->count(),
+            'medical_officers' => User::query()->where('user_type', User::ROLE_MEDICAL_OFFICER)->count(),
+            'dermatologists' => User::query()->where('user_type', User::ROLE_DERMATOLOGIST)->count(),
             'cases' => PatientCase::query()->count(),
             'resources' => EducationalResource::query()->count(),
             'invitations' => Registration::query()->where('is_registered', false)->whereNull('revoked_at')->count(),
@@ -51,7 +51,7 @@ class WorkspaceController extends Controller
                     ->orWhere('last_name', 'like', '%'.$search.'%');
             }))
             ->when($role === User::ROLE_ADMIN, fn ($query) => $query->where(fn ($query) => $query->where('user_type', User::ROLE_ADMIN)->orWhere('is_admin', true)))
-            ->when($role !== '' && $role !== User::ROLE_ADMIN, fn ($query) => $query->where('user_type', $role)->where('is_admin', false))
+            ->when($role !== '' && $role !== User::ROLE_ADMIN, fn ($query) => $query->where('user_type', $role))
             ->orderBy('last_name')->orderBy('first_name')->paginate($perPage)->withQueryString();
         return response()->json([
             'data' => $users->getCollection()->map(fn (User $user) => $this->userPayload($user))->values(),
@@ -71,12 +71,18 @@ class WorkspaceController extends Controller
             'last_name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email:rfc', 'max:100', Rule::unique('users', 'email')->ignore($user->id)],
             'user_type' => ['required', Rule::in(User::ROLES)],
+            'is_admin' => ['sometimes', 'boolean'],
             'phone' => ['nullable', 'string', 'max:32'],
             'facility_name' => ['nullable', 'string', 'max:150'],
             'specialty' => ['nullable', 'string', 'max:120'],
             'password' => ['nullable', 'confirmed', PasswordRule::min(10)->letters()->numbers()],
         ]);
-        $willBeAdmin = $data['user_type'] === User::ROLE_ADMIN;
+        $willBeAdmin = array_key_exists('is_admin', $data)
+            ? (bool) $data['is_admin']
+            : ($user->isAdministrator() || $data['user_type'] === User::ROLE_ADMIN);
+        if (! $willBeAdmin && $data['user_type'] === User::ROLE_ADMIN) {
+            return response()->json(['message' => 'Choose a clinical user type before removing administrator access.'], 422);
+        }
         if ($user->is($request->user()) && ! $willBeAdmin) return response()->json(['message' => 'You cannot remove your own administrator access.'], 422);
         if ($user->isAdministrator() && ! $willBeAdmin && $this->activeAdminCount() <= 1) return response()->json(['message' => 'The last active administrator cannot be demoted.'], 422);
 
@@ -154,6 +160,8 @@ class WorkspaceController extends Controller
         return [
             'id' => $user->id, 'first_name' => $user->first_name, 'last_name' => $user->last_name,
             'name' => $user->full_name, 'email' => $user->email, 'role' => $user->role(),
+            'user_type' => $user->user_type, 'is_admin' => $user->isAdministrator(),
+            'roles' => $user->roles(), 'role_label' => $user->roleLabel(),
             'phone' => $user->phone, 'facility_name' => $user->facility_name, 'specialty' => $user->specialty,
             'created_at' => $user->created_at, 'deleted_at' => $user->deleted_at,
         ];

@@ -11,7 +11,7 @@
                     <span class="sidebar-avatar" aria-hidden="true">{{ mb_strtoupper(mb_substr(auth()->user()->first_name, 0, 1).mb_substr(auth()->user()->last_name, 0, 1)) }}</span>
                     <span class="topbar-user">
                         <span class="topbar-user-name">{{ auth()->user()->full_name }}</span>
-                        <span class="topbar-role">{{ str(auth()->user()->role())->replace('_', ' ')->title() }}</span>
+                        <span class="topbar-role">{{ auth()->user()->roleLabel() }}</span>
                     </span>
                     <img class="account-chevron" src="{{ asset('images/chevron-down.svg') }}" alt="" aria-hidden="true">
                 </summary>
@@ -19,7 +19,7 @@
                     <span class="account-label">CURRENT USER</span>
                     <strong>{{ auth()->user()->full_name }}</strong>
                     <span class="account-email">{{ auth()->user()->email }}</span>
-                    <span class="role-badge account-role">{{ str(auth()->user()->role())->replace('_', ' ')->title() }}</span>
+                    <span class="role-badge account-role">{{ auth()->user()->roleLabel() }}</span>
                     <a class="account-menu-link" href="{{ route('profile.edit') }}">Edit profile details</a>
                     <form method="post" action="{{ route('logout') }}">
                         @csrf

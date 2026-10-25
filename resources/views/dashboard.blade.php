@@ -12,9 +12,9 @@
         </div>
         @if ($user->isAdministrator())
             <a class="primary-button dashboard-action" href="{{ route('users.index') }}">Manage users <span aria-hidden="true">→</span></a>
-        @elseif ($user->role() === \App\Models\User::ROLE_MEDICAL_OFFICER)
+        @elseif ($user->clinicalRole() === \App\Models\User::ROLE_MEDICAL_OFFICER)
             <a class="primary-button dashboard-action" href="{{ route('cases.create') }}">Add patient case <span aria-hidden="true">→</span></a>
-        @elseif ($user->role() === \App\Models\User::ROLE_DERMATOLOGIST)
+        @elseif ($user->clinicalRole() === \App\Models\User::ROLE_DERMATOLOGIST)
             <a class="primary-button dashboard-action" href="{{ route('cases.index') }}">Review assigned cases <span aria-hidden="true">→</span></a>
         @endif
     </section>
@@ -66,7 +66,7 @@
                                         </span>
                                     </div>
                                 </td>
-                                <td><span class="role-badge">{{ str($listedUser->role())->replace('_', ' ')->title() }}</span></td>
+                                <td><span class="role-badge">{{ $listedUser->roleLabel() }}</span></td>
                                 <td>{{ $listedUser->phone ?: '—' }}</td>
                                 <td>
                                     <span class="stacked-detail">{{ $listedUser->facility_name ?: '—' }}</span>
@@ -93,7 +93,7 @@
                 <div class="avatar" aria-hidden="true">{{ mb_strtoupper(mb_substr($user->first_name, 0, 1).mb_substr($user->last_name, 0, 1)) }}</div>
                 <div>
                     <h2 id="profile-title">{{ $user->full_name }}</h2>
-                    <span class="role-badge">{{ str($user->role())->replace('_', ' ')->title() }}</span>
+                    <span class="role-badge">{{ $user->roleLabel() }}</span>
                 </div>
                 <a class="secondary-button dashboard-profile-link" href="{{ route('profile.show') }}">View profile</a>
             </div>

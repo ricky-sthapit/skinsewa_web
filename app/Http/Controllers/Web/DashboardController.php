@@ -18,8 +18,8 @@ class DashboardController extends Controller
         if ($user->isAdministrator()) {
             $stats = [
                 'users' => User::query()->count(),
-                'medical_officers' => User::query()->where('user_type', User::ROLE_MEDICAL_OFFICER)->where('is_admin', false)->count(),
-                'dermatologists' => User::query()->where('user_type', User::ROLE_DERMATOLOGIST)->where('is_admin', false)->count(),
+                'medical_officers' => User::query()->where('user_type', User::ROLE_MEDICAL_OFFICER)->count(),
+                'dermatologists' => User::query()->where('user_type', User::ROLE_DERMATOLOGIST)->count(),
             ];
 
             $recentUsers = User::query()->latest('created_at')->limit(8)->get();

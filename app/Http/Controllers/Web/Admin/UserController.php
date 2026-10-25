@@ -44,7 +44,7 @@ class UserController extends Controller
                 ->where('user_type', User::ROLE_ADMIN)
                 ->orWhere('is_admin', true));
         } elseif ($userType !== '') {
-            $query->where('user_type', $userType)->where('is_admin', false);
+            $query->where('user_type', $userType);
         }
 
         return view('admin.users.index', [
@@ -70,13 +70,19 @@ class UserController extends Controller
             'last_name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email:rfc', 'max:100', Rule::unique('users', 'email')->ignore($user->id)],
             'user_type' => ['required', Rule::in(User::ROLES)],
+            'is_admin' => ['sometimes', 'boolean'],
             'phone' => ['nullable', 'string', 'max:32'],
             'facility_name' => ['nullable', 'string', 'max:150'],
             'specialty' => ['nullable', 'string', 'max:120'],
             'password' => ['nullable', 'confirmed', PasswordRule::min(10)->letters()->numbers()],
         ]);
 
-        $willBeAdmin = $data['user_type'] === User::ROLE_ADMIN;
+        $willBeAdmin = array_key_exists('is_admin', $data)
+            ? (bool) $data['is_admin']
+            : ($user->isAdministrator() || $data['user_type'] === User::ROLE_ADMIN);
+        if (! $willBeAdmin && $data['user_type'] === User::ROLE_ADMIN) {
+            return back()->withErrors(['user_type' => 'Choose a clinical user type before removing administrator access.'])->withInput();
+        }
         if ($user->is($request->user()) && ! $willBeAdmin) {
             return back()->withErrors(['user_type' => 'You cannot remove your own administrator access.'])->withInput();
         }
