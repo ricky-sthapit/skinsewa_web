@@ -126,6 +126,16 @@ class PatientCaseController extends Controller
         ]);
     }
 
+    public function dermatologists(): JsonResponse
+    {
+        $users = User::query()
+            ->where('user_type', User::ROLE_DERMATOLOGIST)
+            ->orderBy('first_name')->orderBy('last_name')
+            ->get();
+
+        return response()->json(['data' => $users->map(fn (User $user) => $this->userSummary($user))->values()]);
+    }
+
     public function store(Request $request): JsonResponse
     {
         abort_unless($request->user()->clinicalRole() === User::ROLE_MEDICAL_OFFICER, 403);

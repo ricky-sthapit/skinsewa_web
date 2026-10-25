@@ -48,6 +48,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         });
 
         Route::middleware('role:MEDICAL_OFFICER')->group(function (): void {
+            Route::get('/case-dermatologists', [PatientCaseController::class, 'dermatologists'])->name('cases.dermatologists');
             Route::get('/patients/lookup', [PatientCaseController::class, 'lookupPatient'])->name('patients.lookup');
             Route::post('/cases', [PatientCaseController::class, 'store'])->middleware('throttle:10,1')->name('cases.store');
         });
