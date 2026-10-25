@@ -9,7 +9,12 @@ class Treatment extends Model
 {
     protected $table = 'treatments';
 
-    protected $fillable = ['diagnosis', 'prevention', 'treatment', 'referral', 'treatment_by', 'case_id'];
+    protected $fillable = ['diagnosis', 'prevention', 'treatment', 'referral', 'follow_up_at', 'treatment_by', 'case_id'];
+
+    protected function casts(): array
+    {
+        return ['follow_up_at' => 'datetime'];
+    }
 
     public function patientCase(): BelongsTo
     {

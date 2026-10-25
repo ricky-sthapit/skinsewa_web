@@ -22,14 +22,14 @@
             <input id="otp" name="otp" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" value="{{ old('otp') }}" required>
 
             <div class="registration-name-fields">
-                <div><label for="first-name">First name</label><input id="first-name" name="first_name" value="{{ old('first_name') }}" autocomplete="given-name" maxlength="100" required></div>
-                <div><label for="last-name">Last name</label><input id="last-name" name="last_name" value="{{ old('last_name') }}" autocomplete="family-name" maxlength="100" required></div>
+                <div><label for="first-name">First name</label><input id="first-name" name="first_name" type="text" value="{{ old('first_name') }}" autocomplete="given-name" maxlength="100" required></div>
+                <div><label for="last-name">Last name</label><input id="last-name" name="last_name" type="text" value="{{ old('last_name') }}" autocomplete="family-name" maxlength="100" required></div>
             </div>
 
             <label for="phone">Phone <span class="optional-label">Optional</span></label>
             <input id="phone" name="phone" type="tel" value="{{ old('phone') }}" autocomplete="tel" maxlength="32">
             <label for="facility-name">Facility <span class="optional-label">Optional</span></label>
-            <input id="facility-name" name="facility_name" value="{{ old('facility_name', $registration->facility_name) }}" maxlength="150">
+            <input id="facility-name" name="facility_name" type="text" value="{{ old('facility_name', $registration->facility_name) }}" maxlength="150">
             @if ($registration->role === \App\Models\User::ROLE_DERMATOLOGIST)
                 <label for="specialty">Specialty <span class="optional-label">Optional</span></label>
                 <input id="specialty" name="specialty" value="{{ old('specialty') }}" maxlength="120">

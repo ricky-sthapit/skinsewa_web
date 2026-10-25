@@ -72,6 +72,72 @@ Admin invite request (requires an `ADMIN` bearer token):
 
 The invite response never contains the OTP. The registration response and login response each contain `{ data: { user, token, token_type } }`. The user payload includes the assigned level as `role`. Password reset responses do not reveal whether an email address has an account.
 
+## Android API
+
+All mobile routes use the `/api/v1` prefix. Send `Accept: application/json` on every request. For protected routes, send `Authorization: Bearer <token>`; send JSON as `Content-Type: application/json`, except uploads, which use `multipart/form-data`. The API returns JSON errors with Laravel validation details and HTTP `422`; inaccessible records return `404` to avoid disclosing their existence. IDs in path segments are database IDs.
+
+| Method | Route | Access | Purpose |
+|---|---|---|---|
+| GET | `/api/health` | Public | Check API availability |
+| POST | `/api/v1/auth/login` | Public | Sign in and receive a bearer token |
+| POST | `/api/v1/auth/register` | Public | Register with invited email + six-digit OTP |
+| POST | `/api/v1/auth/forgot-password` | Public | Email password reset link |
+| POST | `/api/v1/auth/reset-password` | Public | Reset using emailed token |
+| GET | `/api/v1/auth/me` | Signed in | Current user and role |
+| POST | `/api/v1/auth/logout` | Signed in | Revoke current token |
+| GET/PATCH | `/api/v1/profile` | Signed in | View/update phone, facility, specialty |
+| GET | `/api/v1/places/provinces` | Signed in | List provinces |
+| GET | `/api/v1/places/{place}/children` | Signed in | List districts for a province or local levels for a district |
+| GET | `/api/v1/cases` | All roles | List accessible cases; admin sees all |
+| GET | `/api/v1/cases/{case}` | All roles | Case, patient, history, photos, chat and treatment details |
+| GET | `/api/v1/patients/lookup?patient_code=...` | Medical officer | Find a returning patient and prior cases |
+| POST | `/api/v1/cases` | Medical officer | Create a patient visit/case and upload images |
+| GET | `/api/v1/cases/{case}/messages?after_id=0` | All roles | Poll the conversation for new messages |
+| POST | `/api/v1/cases/{case}/messages` | Case participants | Send a message and optional images |
+| GET | `/api/v1/cases/{case}/photos/{photo}` | Case access | Read a private case/chat image |
+| POST | `/api/v1/cases/{case}/treatments` | Assigned dermatologist | Add diagnosis and treatment plan; complete the case |
+| GET | `/api/v1/resources` | Signed in | List/viewable PDF resources |
+| GET | `/api/v1/resources/{resource}/view` | Signed in | Stream PDF inline |
+| GET | `/api/v1/resources/{resource}/download` | Signed in | Download PDF |
+| GET | `/api/v1/admin/dashboard` | Admin | Workspace counts, cases by status, recent cases |
+| GET/GET by ID/PATCH/DELETE | `/api/v1/admin/users` | Admin | Search, inspect, edit or soft-delete users |
+| GET/POST | `/api/v1/admin/invitations` | Admin | List invitations or invite a medical officer/dermatologist |
+| POST | `/api/v1/admin/invitations/{id}/resend` | Admin | Issue a fresh invitation link and OTP |
+| POST | `/api/v1/admin/registration-requests` | Admin | Compatibility invite endpoint (`role` field instead of `user_type`) |
+| POST/POST by ID/DELETE | `/api/v1/admin/resources` | Admin | Create/update/delete PDF resources (multipart update uses POST `/.../{id}`) |
+
+### Request examples
+
+Login:
+
+```json
+{ "email": "worker@example.org", "password": "CarePass123" }
+```
+
+Case list supports `q`, `status`, `page`, and `per_page` query parameters. Page size is bounded to 5–25. The response shape is `{ "data": [...], "meta": { "current_page", "last_page", "per_page", "total", "available_statuses" } }`.
+
+To create a new case, send `multipart/form-data` with `patient_name`, `gender` (`Male` or `Female`), `age`, `phc`, `province_id`, `district_id`, `municipality_id`, `finding`, `history`, `symptoms`, `assigned_to` (dermatologist user ID), and `consent=true`. Optional fields are `phone`, `email`, `weight`, `follow_up_of` (prior case ID), and repeated `photos[]` image files (up to 10 JPG/PNG/WebP images, max 10 MB each). For a returning patient, send `patient_id` instead of new-patient demographic/location fields; retrieve it using the patient lookup endpoint. A new case is created for every visit, including follow-ups.
+
+To send a chat message, use `multipart/form-data` with `detail` and optional repeated `photos[]`. `detail` can be omitted when at least one photo is attached. The response includes `last_id` on message polling so the Android app can request only newer messages. Uploaded chat photos also appear in the case `photos` gallery.
+
+The assigned dermatologist submits a JSON treatment plan such as:
+
+```json
+{
+  "diagnosis": "Acne vulgaris",
+  "treatment": "Apply the prescribed ointment nightly for two weeks.",
+  "prevention": "Use a gentle cleanser and avoid picking lesions.",
+  "referral": "",
+  "follow_up_at": "2026-11-01T09:00:00+05:45"
+}
+```
+
+The treatment is stored in the existing `treatments` table and the case status becomes `completed`. Case list filters return status strings from the database; the app should use `meta.available_statuses` rather than hard-coding a list.
+
+Admin user listing accepts `q`, `user_type`, `page`, and `per_page` (5, 10, 15, 20, or 25). Invitation listing accepts `q`, `status` (`pending`, `accepted`, `expired`, `revoked`), `page`, and `per_page`. Resource creation and update use multipart fields `display_name` and `resource_file` (PDF, max 20 MB). Admin invite creation takes `email`, `user_type` (`MEDICAL_OFFICER` or `DERMATOLOGIST`), and optional `facility_name`; the OTP is sent by email and is never returned in API responses.
+
+Conversation notifications can be bridged to a realtime service with the configured signed webhook described above. The app can use the message polling endpoint as a fallback; webhook delivery itself targets the configured server URL, not Android clients.
+
 ## Web homepage
 
 The homepage (`/`) checks the web session: guests see the sign-in form, and signed-in users see the SkinSewa logo with their name, email, level, phone, facility, and specialty. Successful sign-in regenerates the session; sign-out invalidates it. Web sessions and mobile bearer tokens are separate.
