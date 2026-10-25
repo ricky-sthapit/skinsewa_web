@@ -390,6 +390,10 @@ h1 { margin-bottom: 8px; font-size: clamp(1.9rem, 5vw, 2.4rem); letter-spacing: 
 .case-photo-preview-item { display: grid; min-width: 0; gap: 5px; }
 .case-photo-preview-item img { width: 100%; aspect-ratio: 1; border-radius: 9px; background: #e9f1f3; object-fit: cover; }
 .case-photo-preview-item span { overflow: hidden; color: #71899a; font-size: .68rem; text-overflow: ellipsis; white-space: nowrap; }
+.case-photo-preview-item .case-photo-remove { justify-self: start; padding: 4px 8px; border: 1px solid #e3c4c4; border-radius: 7px; color: #9b4444; background: #fff; font: inherit; font-size: .68rem; cursor: pointer; }
+.case-photo-preview-item .case-photo-remove:hover { border-color: #c97b7b; background: #fff7f7; }
+.case-photo-limit-message { display: block; margin: 8px 24px 0; }
+.case-photo-limit-message[hidden] { display: none; }
 .empty-doctor-note { margin: 0 24px; padding: 13px 15px; border: 1px solid #f0dcaa; border-radius: 10px; color: #785d28; background: #fff9e9; font-size: .82rem; line-height: 1.55; }
 .case-doctor-field { max-width: 560px; margin: 0 24px 18px; }
 .case-consent-row { display: flex; align-items: flex-start; gap: 10px; margin: 0 24px; color: #496a81; font-size: .79rem; line-height: 1.5; }

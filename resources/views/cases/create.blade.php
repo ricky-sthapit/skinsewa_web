@@ -63,6 +63,7 @@
         <label class="case-photo-picker" for="case-photos"><span class="photo-picker-icon" aria-hidden="true">＋</span><span><strong>Add skin photos</strong><small>JPG, PNG, or WebP · up to 10 photos · 10 MB each</small></span><span class="secondary-button small-button">Choose files</span></label>
         <input class="case-photo-input" id="case-photos" type="file" name="photos[]" accept="image/jpeg,image/png,image/webp" multiple>
         <div class="case-photo-preview" id="case-photo-preview" aria-live="polite"></div>
+        <small class="field-error case-photo-limit-message" id="case-photo-limit-message" role="status" hidden></small>
         @error('photos')<small class="field-error">{{ $message }}</small>@enderror
         @foreach ($errors->get('photos.*') as $photoErrors) @foreach ($photoErrors as $message)<small class="field-error">{{ $message }}</small>@endforeach @endforeach
     </section>
@@ -196,27 +197,63 @@
 
     const picker = document.getElementById('case-photos');
     const preview = document.getElementById('case-photo-preview');
-    picker.addEventListener('change', () => {
+    const limitMessage = document.getElementById('case-photo-limit-message');
+    const pendingPhotos = [];
+    let previewUrls = [];
+
+    const syncPickerFiles = () => {
+        const transfer = new DataTransfer();
+        pendingPhotos.forEach((file) => transfer.items.add(file));
+        picker.files = transfer.files;
+    };
+
+    const renderPhotoPreviews = () => {
+        previewUrls.forEach((url) => URL.revokeObjectURL(url));
+        previewUrls = [];
         preview.replaceChildren();
-        const files = Array.from(picker.files || []);
-        if (files.length > 10) {
-            picker.setCustomValidity('Choose no more than 10 photos.');
-            picker.reportValidity();
-            picker.value = '';
-            return;
-        }
-        picker.setCustomValidity('');
-        files.forEach((file) => {
+
+        pendingPhotos.forEach((file, index) => {
             const item = document.createElement('div');
             item.className = 'case-photo-preview-item';
             const image = document.createElement('img');
-            image.src = URL.createObjectURL(file);
-            image.alt = '';
+            const imageUrl = URL.createObjectURL(file);
+            previewUrls.push(imageUrl);
+            image.src = imageUrl;
+            image.alt = `Preview of ${file.name}`;
             const caption = document.createElement('span');
             caption.textContent = file.name;
-            item.append(image, caption);
+            const remove = document.createElement('button');
+            remove.type = 'button';
+            remove.className = 'case-photo-remove';
+            remove.textContent = 'Remove';
+            remove.setAttribute('aria-label', `Remove ${file.name}`);
+            remove.addEventListener('click', () => {
+                pendingPhotos.splice(index, 1);
+                syncPickerFiles();
+                renderPhotoPreviews();
+            });
+            item.append(image, caption, remove);
             preview.append(item);
         });
+    };
+
+    picker.addEventListener('change', () => {
+        const newlySelected = Array.from(picker.files || []);
+        if (newlySelected.length === 0) return;
+
+        if (pendingPhotos.length + newlySelected.length > 10) {
+            limitMessage.textContent = 'You can attach up to 10 photos. Remove a photo before adding more.';
+            limitMessage.hidden = false;
+            syncPickerFiles();
+            renderPhotoPreviews();
+            return;
+        }
+
+        limitMessage.textContent = '';
+        limitMessage.hidden = true;
+        pendingPhotos.push(...newlySelected);
+        syncPickerFiles();
+        renderPhotoPreviews();
     });
 })();
 </script>
