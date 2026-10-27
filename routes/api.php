@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\V1\Admin\EducationalResourceController as AdminEducationalResourceController;
 use App\Http\Controllers\Api\V1\Admin\RegistrationRequestController;
+use App\Http\Controllers\Api\V1\Admin\CaseReportsController;
 use App\Http\Controllers\Api\V1\Admin\WorkspaceController as AdminWorkspaceController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CaseConversationController;
@@ -61,6 +62,7 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
         Route::post('/registration-requests', [RegistrationRequestController::class, 'store'])
             ->middleware('throttle:10,1')->name('registration-requests.store');
         Route::get('/dashboard', [AdminWorkspaceController::class, 'dashboard'])->name('dashboard');
+        Route::get('/reports', CaseReportsController::class)->name('reports.index');
         Route::get('/users', [AdminWorkspaceController::class, 'users'])->name('users.index');
         Route::get('/users/{user}', [AdminWorkspaceController::class, 'showUser'])->name('users.show');
         Route::patch('/users/{user}', [AdminWorkspaceController::class, 'updateUser'])->name('users.update');

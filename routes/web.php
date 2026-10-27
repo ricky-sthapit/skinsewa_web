@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\DashboardController;
 use App\Http\Controllers\Web\Admin\InvitationController;
 use App\Http\Controllers\Web\InvitationRegistrationController;
 use App\Http\Controllers\Web\Admin\UserController;
+use App\Http\Controllers\Web\Admin\ReportsController;
 use App\Http\Controllers\Web\ProfileController;
 use App\Http\Controllers\Web\PasswordResetController;
 use App\Http\Controllers\Web\PatientCaseController;
@@ -69,6 +70,7 @@ Route::get('/dashboard', fn () => redirect()->route('home'))
     ->middleware('auth')->name('dashboard');
 
 Route::middleware(['auth', 'role:ADMIN'])->group(function (): void {
+    Route::get('/reports', [ReportsController::class, 'index'])->name('reports.index');
     Route::get('/invitations', [InvitationController::class, 'index'])->name('invitations.index');
     Route::get('/invitations/create', [InvitationController::class, 'create'])->name('invitations.create');
     Route::post('/invitations', [InvitationController::class, 'store'])

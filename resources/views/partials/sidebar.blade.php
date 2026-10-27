@@ -25,6 +25,9 @@
             </a>
         @endif
         @if (auth()->user()->isAdministrator())
+            <a class="sidebar-link {{ request()->routeIs('reports.*') ? 'is-active' : '' }}" href="{{ route('reports.index') }}" title="Reports">
+                <span class="sidebar-icon" aria-hidden="true">▦</span><span class="sidebar-link-label">Reports</span>
+            </a>
             <a class="sidebar-link {{ request()->routeIs('users.*') ? 'is-active' : '' }}" href="{{ route('users.index') }}" title="Users">
                 <span class="sidebar-icon" aria-hidden="true">♙</span><span class="sidebar-link-label">Users</span>
             </a>
