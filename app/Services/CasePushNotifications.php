@@ -5,20 +5,20 @@ namespace App\Services;
 use App\Models\CaseMessage;
 use App\Models\PatientCase;
 use App\Models\User;
+use Google\Auth\Credentials\ServiceAccountCredentials;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Log;
-use Kreait\Firebase\Contract\Messaging;
-use Kreait\Firebase\Exception\Messaging\NotFound;
-use Kreait\Firebase\Exception\Messaging\SenderIdMismatch;
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\Messaging\AndroidConfig;
-use Kreait\Firebase\Messaging\CloudMessage;
-use Kreait\Firebase\Messaging\Notification;
-use Kreait\Firebase\Http\HttpClientOptions;
+use RuntimeException;
 use Throwable;
 
 class CasePushNotifications
 {
-    private ?Messaging $messaging = null;
+    private ?Client $httpClient = null;
+
+    private ?string $accessToken = null;
+
+    private ?string $projectId = null;
 
     public function caseAssigned(PatientCase $case): void
     {
@@ -66,32 +66,11 @@ class CasePushNotifications
         if ($tokens->isEmpty()) return;
 
         try {
-            $messaging = $this->messaging();
-            if (! $messaging) return;
-
             foreach ($tokens as $device) {
-                $message = CloudMessage::new()
-                    ->withToken($device->token)
-                    ->withNotification(Notification::create($title, $body))
-                    ->withData(['type' => $type, 'case_id' => (string) $caseId])
-                    ->withAndroidConfig(AndroidConfig::fromArray([
-                        'priority' => 'high',
-                        'notification' => ['channel_id' => 'case_updates'],
-                    ]));
-
                 try {
-                    $messaging->send($message);
-                } catch (NotFound $exception) {
-                    $device->delete();
-                    Log::info('Removed an invalid SkinSewa FCM device token.', [
-                        'user_id' => $user->id,
-                        'case_id' => $caseId,
-                    ]);
-                } catch (SenderIdMismatch $exception) {
-                    Log::error('SkinSewa FCM token belongs to a different Firebase project.', [
-                        'user_id' => $user->id,
-                        'case_id' => $caseId,
-                    ]);
+                    $this->sendToFcm($device->token, $title, $body, $type, $caseId);
+                } catch (RequestException $exception) {
+                    $this->logFcmHttpError($exception, $user, $caseId, $type, $device->token);
                 } catch (Throwable $exception) {
                     Log::warning('SkinSewa case push delivery failed.', [
                         'user_id' => $user->id,
@@ -111,20 +90,104 @@ class CasePushNotifications
         }
     }
 
-    private function messaging(): ?Messaging
+    private function sendToFcm(string $deviceToken, string $title, string $body, string $type, int $caseId): void
     {
-        if ($this->messaging) return $this->messaging;
+        $endpoint = sprintf(
+            'https://fcm.googleapis.com/v1/projects/%s/messages:send',
+            rawurlencode($this->firebaseProjectId()),
+        );
+
+        $this->httpClient()->post($endpoint, [
+            'headers' => ['Authorization' => 'Bearer '.$this->firebaseAccessToken()],
+            'json' => [
+                'message' => [
+                    'token' => $deviceToken,
+                    'notification' => ['title' => $title, 'body' => $body],
+                    'data' => ['type' => $type, 'case_id' => (string) $caseId],
+                    'android' => [
+                        'priority' => 'HIGH',
+                        'notification' => ['channel_id' => 'case_updates'],
+                    ],
+                ],
+            ],
+        ]);
+    }
+
+    private function logFcmHttpError(RequestException $exception, User $user, int $caseId, string $type, ?string $deviceToken): void
+    {
+        $response = $exception->getResponse();
+        $payload = $response ? json_decode((string) $response->getBody(), true) : null;
+        $error = is_array($payload) ? ($payload['error'] ?? []) : [];
+        $details = is_array($error) ? ($error['details'] ?? []) : [];
+        $firebaseError = null;
+
+        foreach (is_array($details) ? $details : [] as $detail) {
+            if (($detail['@type'] ?? null) === 'type.googleapis.com/google.firebase.fcm.v1.FcmError') {
+                $firebaseError = $detail['errorCode'] ?? null;
+                break;
+            }
+        }
+
+        if ($firebaseError === 'UNREGISTERED' && $deviceToken !== null) {
+            $user->fcmDeviceTokens()->where('token', $deviceToken)->delete();
+            Log::info('Removed an invalid SkinSewa FCM device token.', [
+                'user_id' => $user->id,
+                'case_id' => $caseId,
+            ]);
+            return;
+        }
+
+        $context = [
+            'user_id' => $user->id,
+            'case_id' => $caseId,
+            'event' => $type,
+            'http_status' => $response?->getStatusCode(),
+            'firebase_error' => $firebaseError ?? (is_array($error) ? ($error['status'] ?? null) : null),
+        ];
+
+        if ($firebaseError === 'SENDER_ID_MISMATCH') {
+            Log::error('SkinSewa FCM token belongs to a different Firebase project.', $context);
+            return;
+        }
+
+        Log::warning('SkinSewa FCM HTTP v1 delivery failed.', $context);
+    }
+
+    private function firebaseAccessToken(): string
+    {
+        if ($this->accessToken !== null) return $this->accessToken;
 
         $credentials = (string) config('services.firebase.credentials', '');
         if ($credentials === '' || ! is_file($credentials) || ! is_readable($credentials)) {
-            Log::warning('Firebase credentials are not configured; case push notification was skipped.');
-            return null;
+            throw new RuntimeException('Firebase credentials are not configured or are not readable.');
         }
 
-        $httpOptions = HttpClientOptions::default()->withConnectTimeout(3)->withTimeout(8);
-        return $this->messaging = (new Factory())
-            ->withServiceAccount($credentials)
-            ->withHttpClientOptions($httpOptions)
-            ->createMessaging();
+        $serviceAccount = json_decode((string) file_get_contents($credentials), true);
+        if (! is_array($serviceAccount) || empty($serviceAccount['project_id'])) {
+            throw new RuntimeException('Firebase service-account JSON is invalid or has no project_id.');
+        }
+
+        $auth = new ServiceAccountCredentials('https://www.googleapis.com/auth/firebase.messaging', $serviceAccount);
+        $token = $auth->fetchAuthToken();
+        $accessToken = $token['access_token'] ?? null;
+        if (! is_string($accessToken) || $accessToken === '') {
+            throw new RuntimeException('Google Auth did not return an FCM access token.');
+        }
+
+        $this->projectId = $serviceAccount['project_id'];
+        return $this->accessToken = $accessToken;
+    }
+
+    private function firebaseProjectId(): string
+    {
+        if ($this->projectId !== null) return $this->projectId;
+
+        $this->firebaseAccessToken();
+        return $this->projectId ?? throw new RuntimeException('Firebase service-account project_id is missing.');
+    }
+
+    private function httpClient(): Client
+    {
+        return $this->httpClient ??= new Client(['connect_timeout' => 3, 'timeout' => 8]);
     }
 }
