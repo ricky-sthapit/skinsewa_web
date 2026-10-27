@@ -15,6 +15,8 @@ use Illuminate\Validation\Rules\Password as PasswordRule;
 
 class AuthController extends Controller
 {
+    private const MOBILE_TOKEN_TTL_MINUTES = 60;
+
     public function __construct(private readonly RegistrationService $registrations) {}
 
     public function register(Request $request): JsonResponse
@@ -31,11 +33,20 @@ class AuthController extends Controller
         ]);
 
         $user = $this->registrations->register($data);
-        $token = $user->createToken('skinsewa-mobile')->plainTextToken;
+        $token = $user->createToken(
+            'skinsewa-mobile',
+            ['*'],
+            now()->addMinutes(self::MOBILE_TOKEN_TTL_MINUTES),
+        );
 
         return response()->json([
             'message' => 'Registration completed.',
-            'data' => ['user' => $this->userPayload($user), 'token' => $token, 'token_type' => 'Bearer'],
+            'data' => [
+                'user' => $this->userPayload($user),
+                'token' => $token->plainTextToken,
+                'token_type' => 'Bearer',
+                'expires_in' => self::MOBILE_TOKEN_TTL_MINUTES * 60,
+            ],
         ], 201);
     }
 
@@ -51,11 +62,20 @@ class AuthController extends Controller
             return response()->json(['message' => 'The provided credentials are incorrect.'], 422);
         }
 
-        $token = $user->createToken('skinsewa-mobile')->plainTextToken;
+        $token = $user->createToken(
+            'skinsewa-mobile',
+            ['*'],
+            now()->addMinutes(self::MOBILE_TOKEN_TTL_MINUTES),
+        );
 
         return response()->json([
             'message' => 'Login successful.',
-            'data' => ['user' => $this->userPayload($user), 'token' => $token, 'token_type' => 'Bearer'],
+            'data' => [
+                'user' => $this->userPayload($user),
+                'token' => $token->plainTextToken,
+                'token_type' => 'Bearer',
+                'expires_in' => self::MOBILE_TOKEN_TTL_MINUTES * 60,
+            ],
         ]);
     }
 
