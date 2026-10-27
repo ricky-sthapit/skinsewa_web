@@ -10,4 +10,7 @@ return [
         'secret' => env('CHAT_WEBHOOK_SECRET'),
         'timeout' => env('CHAT_WEBHOOK_TIMEOUT', 5),
     ],
+    'firebase' => [
+        'credentials' => env('FIREBASE_CREDENTIALS'),
+    ],
 ];

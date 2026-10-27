@@ -9,6 +9,7 @@ use App\Models\PatientCase;
 use App\Models\Treatment;
 use App\Models\User;
 use App\Services\CaseChatWebhook;
+use App\Services\CasePushNotifications;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -38,7 +39,7 @@ class CaseConversationController extends Controller
         ]);
     }
 
-    public function store(Request $request, PatientCase $patientCase, CaseChatWebhook $webhook): JsonResponse
+    public function store(Request $request, PatientCase $patientCase, CaseChatWebhook $webhook, CasePushNotifications $pushNotifications): JsonResponse
     {
         $this->ensureParticipant($request, $patientCase);
         $data = $request->validate([
@@ -78,6 +79,7 @@ class CaseConversationController extends Controller
         }
         $message->load(['author', 'photos']);
         $webhook->messageCreated($message);
+        $pushNotifications->chatMessageCreated($message);
         return response()->json(['data' => $this->payload($message, $request->user()->id)], 201);
     }
 

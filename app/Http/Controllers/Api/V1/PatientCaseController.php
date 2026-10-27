@@ -8,6 +8,7 @@ use App\Models\Patient;
 use App\Models\PatientCase;
 use App\Models\Place;
 use App\Models\User;
+use App\Services\CasePushNotifications;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -136,7 +137,7 @@ class PatientCaseController extends Controller
         return response()->json(['data' => $users->map(fn (User $user) => $this->userSummary($user))->values()]);
     }
 
-    public function store(Request $request): JsonResponse
+    public function store(Request $request, CasePushNotifications $pushNotifications): JsonResponse
     {
         abort_unless($request->user()->clinicalRole() === User::ROLE_MEDICAL_OFFICER, 403);
         $returning = $request->filled('patient_id');
@@ -231,6 +232,7 @@ class PatientCaseController extends Controller
         }
 
         $case->load(['patient', 'assignedDoctor']);
+        $pushNotifications->caseAssigned($case);
         return response()->json(['message' => 'Case created and sent to the dermatologist.', 'data' => $this->caseSummary($case)], 201);
     }
 

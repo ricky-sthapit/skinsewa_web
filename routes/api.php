@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\V1\Admin\CaseReportsController;
 use App\Http\Controllers\Api\V1\Admin\WorkspaceController as AdminWorkspaceController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CaseConversationController;
+use App\Http\Controllers\Api\V1\DeviceTokenController;
 use App\Http\Controllers\Api\V1\EducationalResourceController;
 use App\Http\Controllers\Api\V1\PatientCaseController;
 use App\Http\Controllers\Api\V1\PlaceController;
@@ -28,6 +29,8 @@ Route::prefix('v1')->name('api.v1.')->group(function (): void {
     });
 
     Route::middleware('auth:sanctum')->group(function (): void {
+        Route::post('/device-tokens', [DeviceTokenController::class, 'store'])->middleware('throttle:30,1')->name('device-tokens.store');
+        Route::delete('/device-tokens', [DeviceTokenController::class, 'destroy'])->middleware('throttle:30,1')->name('device-tokens.destroy');
         Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 

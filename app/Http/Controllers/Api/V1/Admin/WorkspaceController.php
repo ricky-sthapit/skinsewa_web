@@ -95,6 +95,7 @@ class WorkspaceController extends Controller
         if (! empty($data['password'])) {
             $user->password = Hash::make($data['password']);
             $user->tokens()->delete();
+            $user->fcmDeviceTokens()->delete();
         }
         $user->save();
         return response()->json(['message' => 'User updated.', 'data' => $this->userPayload($user)]);
@@ -105,6 +106,7 @@ class WorkspaceController extends Controller
         if ($user->is($request->user())) return response()->json(['message' => 'You cannot deactivate your own account.'], 422);
         if ($user->isAdministrator() && $this->activeAdminCount() <= 1) return response()->json(['message' => 'The last active administrator cannot be deactivated.'], 422);
         $user->tokens()->delete();
+        $user->fcmDeviceTokens()->delete();
         $user->delete();
         return response()->json(['message' => 'User deactivated.']);
     }

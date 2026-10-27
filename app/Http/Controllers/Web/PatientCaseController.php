@@ -8,6 +8,7 @@ use App\Models\Patient;
 use App\Models\PatientCase;
 use App\Models\Place;
 use App\Models\User;
+use App\Services\CasePushNotifications;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -138,7 +139,7 @@ class PatientCaseController extends Controller
         ]);
     }
 
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, CasePushNotifications $pushNotifications): RedirectResponse
     {
         $isReturningPatient = $request->filled('patient_id');
         $patientRequired = Rule::requiredIf(! $isReturningPatient);
@@ -276,6 +277,9 @@ class PatientCaseController extends Controller
             if ($storedDirectory) Storage::disk('local')->deleteDirectory($storedDirectory);
             throw $exception;
         }
+
+        $case->load('assignedDoctor');
+        $pushNotifications->caseAssigned($case);
 
         return redirect()->route('cases.show', $case)->with(
             'status',
